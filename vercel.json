@@ -1,0 +1,18 @@
+{
+    "devCommand": "next dev",
+    "buildCommand": "next build",
+    "outputDirectory": ".next",
+    "framework": "nextjs",
+    "cleanUrls": true,
+    "functions": {
+        "src/app/api/**/*.ts":{
+            "memory": 1024,
+            "maxduration": 10
+        }
+    },
+    "git": {
+        "*": false,
+        "main": true,
+        "dev": true
+    }
+}
