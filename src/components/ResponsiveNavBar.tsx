@@ -18,7 +18,7 @@ export default function ResponsiveNavBar()
             <nav className="flex md:hidden items-center justify-between pt-10 px-10 h-full z-40 relative bg-white">
                 <h1 className="flex items-center gap-2 font-bold">
                     <Image src={Logo} width="40" height="40" alt="LOGO" />
-                    Atendimento Delivery
+                    Rafael Alves
                 </h1>
                 <button
                 onClick={_setIsOpen}
@@ -30,11 +30,10 @@ export default function ResponsiveNavBar()
             </nav>
             <section
             className={`transition-all duration-300 transform ${isOpen ? 'visible translate-y-0' : 'invisible -translate-y-full'} z-30 absolute md:hidden items-center bg-white shadow-md w-full p-6`}>
-                <Link href="#" className="block mt-2 w-full py-2 md:mt-0 text-slate-600 hover:text-indigo-800">Home</Link>
-                <Link href="#" className="block mt-2 w-full py-2 md:mt-0 text-slate-600 hover:text-indigo-800">Funcionalidades</Link>
-                <Link href="#" className="block mt-2 w-full py-2 md:mt-0 text-slate-600 hover:text-indigo-800">Sobre</Link>
-                <Link href="#" className="block mt-2 w-full py-2 mb-4 text-slate-600 hover:text-indigo-800">Parceiros</Link>
-                <Link href="#" className="bg-blue-500 p-2 rounded text-white">Começar Agora</Link>
+                <Link href="#" className="block mt-4 md:mt-0 md:ml-4 text-slate-600 hover:text-indigo-800">Home</Link>
+                <Link href="#" className="block mt-4 md:mt-0 md:ml-4 text-slate-600 hover:text-indigo-800">Projetos</Link>
+                <Link href="#" className="block mt-4 md:mt-0 md:ml-4 text-slate-600 hover:text-indigo-800">Sobre</Link>
+                <Link href="#" className="bg-blue-500 p-2 rounded text-white">Vamos Criar Algo JUntos</Link>
             </section>
         </>
     );
