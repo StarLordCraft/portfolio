@@ -1,7 +1,7 @@
-import Config from '../config/mail';
+import Config from '@/config/mail';
 
 import { render } from '@react-email/render';
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
 import * as nodemailer from "nodemailer";
 
 interface MailAttachment {
@@ -15,7 +15,7 @@ export default class Mail{
     constructor(
         private to?: string,
         private subject?: string,
-        private message?: string,
+        public message?: string,
         private attachments?: MailAttachment[],
     ){}
 
