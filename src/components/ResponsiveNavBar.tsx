@@ -30,7 +30,7 @@ export default function ResponsiveNavBar()
             </nav>
             <section
             className={`transition-all duration-300 transform ${isOpen ? 'visible translate-y-0' : 'invisible -translate-y-full'} z-30 absolute md:hidden items-center bg-white shadow-md w-full p-6`}>
-                <Link href="#" className="block mt-4 md:mt-0 md:ml-4 text-slate-600 hover:text-indigo-800">Home</Link>
+                <Link href="/" className="block mt-4 md:mt-0 md:ml-4 text-slate-600 hover:text-indigo-800">Home</Link>
                 <Link href="#" className="block mt-4 md:mt-0 md:ml-4 text-slate-600 hover:text-indigo-800">Projetos</Link>
                 <Link href="#" className="block mt-4 md:mt-0 md:ml-4 text-slate-600 hover:text-indigo-800">Sobre</Link>
                 <Link href="#" className="bg-blue-500 p-2 rounded text-white">Vamos Criar Algo JUntos</Link>

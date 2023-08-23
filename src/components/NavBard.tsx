@@ -17,7 +17,7 @@ function LargeNavBar()
             </h1>
 
             <div className="flex">
-                <Link href="#" className="block mt-4 md:mt-0 md:ml-4 text-slate-600 hover:text-indigo-800">Home</Link>
+                <Link href="/" className="block mt-4 md:mt-0 md:ml-4 text-slate-600 hover:text-indigo-800">Home</Link>
                 <Link href="#" className="block mt-4 md:mt-0 md:ml-4 text-slate-600 hover:text-indigo-800">Projetos</Link>
                 <Link href="#" className="block mt-4 md:mt-0 md:ml-4 text-slate-600 hover:text-indigo-800">Sobre</Link>
             </div>
