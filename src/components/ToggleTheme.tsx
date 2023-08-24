@@ -2,22 +2,23 @@
 
 import { useEffect, useState } from 'react';
 
-export default function ToggleTHeme()
+export default function ToggleTheme()
 {
-  let themePrefference: any;
-
-  if(localStorage && typeof localStorage.getItem("dark") != "string"){  
-      useEffect(function detectColorTheme() {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        themePrefference = 'dark';
-      } else {
-        themePrefference = 'light';
-      }
-      setIsDarkTheme(() => themePrefference === 'dark');
-      }, []);
-  } else {
-    themePrefference = localStorage.getItem("dark") == 'true' ? "dark" : "light";
+  let themePrefference: string = 'dark';
+  
+  useEffect(function detectColorTheme() {
+  if(typeof localStorage.getItem("dark") == 'string'){
+    themePrefference = localStorage.getItem("dark") == 'true' ? 'dark' : 'light';
   }
+  else{
+    if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      themePrefference = 'dark';
+    } else {
+      themePrefference = 'light';
+    }
+  }
+  setIsDarkTheme(() => themePrefference === 'dark');
+  }, []);
 
   const [isDarkTheme, setIsDarkTheme] = useState <boolean> (themePrefference == 'dark');
   
