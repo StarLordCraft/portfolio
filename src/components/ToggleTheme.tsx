@@ -2,22 +2,26 @@
 
 import { useEffect, useState } from 'react';
 
-function detectColorTheme()
-{
-     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
-         return 'dark';
-     else return 'light';
-}
-
 export default function ToggleTHeme()
 {
-    const [isDarkTheme, setIsDarkTheme] = useState(detectColorTheme() === 'dark')
-    
-    useEffect(() => {
-        const colorTheme = isDarkTheme ? 'dark' : 'light';
-        document.documentElement.classList.remove('dark', 'light');
-        document.documentElement.classList.add(colorTheme);
-    }, [isDarkTheme]);
+  let themePrefference; 
+  useEffect(function detectColorTheme() {
+    let themePreference;
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      themePreference = 'dark';
+    } else {
+      themePreference = 'light';
+    }
+    setIsDarkTheme(themePreference === 'dark');
+  }, []);
+
+  const [isDarkTheme, setIsDarkTheme] = useState(themePrefference === 'dark');
+  
+  useEffect(() => {
+      const colorTheme = isDarkTheme ? 'dark' : 'light';
+      document.documentElement.classList.remove('dark', 'light');
+      document.documentElement.classList.add(colorTheme);
+  }, [isDarkTheme]);
 
     return (
     <button
