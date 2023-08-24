@@ -1,7 +1,13 @@
 "use client"
 
 import { useEffect, useState } from 'react';
-import detectColorTheme from '@/utils/detectColorTheme';
+
+function detectColorTheme()
+{
+     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+         return 'dark';
+     else return 'light';
+}
 
 export default function ToggleTHeme()
 {
