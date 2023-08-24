@@ -1,12 +1,10 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import {useEffect} from 'react';
 
 import NavBar from '@/components/NavBard';
 import Footer from '@/components/Footer';
-
-import detectColorTheme from '@/utils/detectColorTheme';
+import ToggleTheme from '@/components/ToggleTheme';
 
 const inter = Inter({ subsets: ['latin'] })
 const style = [
@@ -23,11 +21,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  useEffect(() => {
-    const colorScheme = detectColorTheme();
-    document.documentElement.classList.add(colorScheme); // Add 'dark' or 'light' class to the root element
-  }, []);
-
   return (
     <html lang="pt-br">
       <head>
