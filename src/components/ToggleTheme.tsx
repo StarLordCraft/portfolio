@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { useEffect, useState } from 'react';
 
@@ -6,7 +6,7 @@ export default function ToggleTHeme()
 {
   let themePrefference: any;
 
-  if(typeof localStorage.getItem("dark") != "string"){  
+  if(localStorage && typeof localStorage.getItem("dark") != "string"){  
       useEffect(function detectColorTheme() {
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         themePrefference = 'dark';
