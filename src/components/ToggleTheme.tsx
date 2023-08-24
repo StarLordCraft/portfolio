@@ -14,8 +14,15 @@ export default function ToggleTHeme()
     }, [isDarkTheme]);
 
     return (
-        <div>
-
-        </div>
+        <button
+        className={`${
+            isDarkTheme ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'
+          } min-h-[40px] min-w-[40px] transition-colors duration-300 rounded-full`}
+            onClick={() => setIsDarkTheme(prevTheme => !prevTheme)}
+        >
+            <span className="material-symbols-outlined">
+                {isDarkTheme? "dark_mode" : "light_mode" }
+            </span>
+        </button>
     );
 }

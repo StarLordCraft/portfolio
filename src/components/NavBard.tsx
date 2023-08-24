@@ -5,6 +5,8 @@ import Logo from '@/../public/next.svg'
 
 import ResponsiveNavBar from "./ResponsiveNavBar";
 
+import ToggleTheme from "./ToggleTheme";
+
 function LargeNavBar()
 {
     return (
@@ -14,6 +16,7 @@ function LargeNavBar()
                 <Image src={Logo} 
                 width="40" height="40" alt="LOGO" />
                 Rafael Alves
+                <ToggleTheme/>
             </h1>
 
             <div className="flex">
