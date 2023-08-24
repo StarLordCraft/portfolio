@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from 'react';
-import { detectColorTheme, toggleColorTheme} from '@/utils/colorTheme';
+import detectColorTheme from '@/utils/detectColorTheme';
 
 export default function ToggleTHeme()
 {
@@ -9,7 +9,8 @@ export default function ToggleTHeme()
     
     useEffect(() => {
         const colorTheme = isDarkTheme ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-theme', colorTheme);
+        document.documentElement.classList.remove('dark', 'light');
+        document.documentElement.classList.add(colorTheme);
     }, [isDarkTheme]);
 
     return (
