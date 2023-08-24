@@ -1,0 +1,25 @@
+@keyframes move-left {
+    from {
+      left: calc(50% + .25rem);
+    }
+    to {
+      left: calc(0% + .25rem);
+    }
+  }
+  
+  @keyframes move-right {
+    from {
+      right: calc(50% + .25rem);
+    }
+    to {
+      right: calc(0% + .25rem);
+    }
+  }
+  
+  .animate-move-left {
+    animation: move-left 0.3s forwards;
+  }
+  
+  .animate-move-right {
+    animation: move-right 0.3s forwards;
+  }
