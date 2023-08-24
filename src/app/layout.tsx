@@ -22,7 +22,7 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200&display=swap" />
       </head>
-      <body className={`${inter.className}`}>
+      <body className={`${inter.className}bg-backgroundLight dark:bg-backgroundDark`}>
         <NavBar />
         {children}
         <Footer />

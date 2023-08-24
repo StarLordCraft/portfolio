@@ -11,7 +11,7 @@ function LargeNavBar()
 {
     return (
         <nav 
-        className="hidden md:flex items-center justify-around mt-10 px-10 h-full">
+        className="hidden md:flex items-center relative justify-around mt-10 px-10 h-full">
             <h1 className="flex items-center gap-2 font-bold">
                 <Image src={Logo} 
                 width="40" height="40" alt="LOGO" />
@@ -36,7 +36,7 @@ function LargeNavBar()
 export default function NavBar()
 {
     return (
-        <header className="fixed w-full top-0 z-50 bg-white">
+        <header className="fixed w-full top-0 z-40 bg-backgroundLight dark:bg-backgroundDark">
             <LargeNavBar /> 
             <ResponsiveNavBar />     
         </header>
