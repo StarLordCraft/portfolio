@@ -6,13 +6,13 @@ export default function ToggleTHeme()
 {
   let themePrefference; 
   useEffect(function detectColorTheme() {
-    let themePreference;
+    let themePreference: string;
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       themePreference = 'dark';
     } else {
       themePreference = 'light';
     }
-    setIsDarkTheme(themePreference === 'dark');
+    setIsDarkTheme(() => themePreference === 'dark');
   }, []);
 
   const [isDarkTheme, setIsDarkTheme] = useState(themePrefference === 'dark');
