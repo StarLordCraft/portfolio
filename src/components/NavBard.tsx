@@ -17,13 +17,13 @@ function LargeNavBar()
             </h1>
 
             <div className="flex">
-                <Link href="/" className="block mt-4 md:mt-0 md:ml-4 text-slate-600 hover:text-indigo-800">Home</Link>
-                <Link href="#" className="block mt-4 md:mt-0 md:ml-4 text-slate-600 hover:text-indigo-800">Projetos</Link>
-                <Link href="#" className="block mt-4 md:mt-0 md:ml-4 text-slate-600 hover:text-indigo-800">Sobre</Link>
+                <Link href="/" className="block mt-4 md:mt-0 md:ml-4 text-slate-600 hover:text-interaction">Home</Link>
+                <Link href="#" className="block mt-4 md:mt-0 md:ml-4 text-slate-600 hover:text-interaction">Projetos</Link>
+                <Link href="#" className="block mt-4 md:mt-0 md:ml-4 text-slate-600 hover:text-interaction">Sobre</Link>
             </div>
 
             <Link href="#" 
-            className="bg-blue-500 p-2 rounded text-white">
+            className="bg-interaction p-2 rounded text-white">
                 Vamos Criar Algo Juntos
             </Link>
         </nav>
