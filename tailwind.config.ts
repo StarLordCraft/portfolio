@@ -12,7 +12,8 @@ const config: Config = {
       colors:{
         "backgroundLight": "#FFF",
         "backgroundDark": "#181818",
-        "interaction": "#1d4ed8"
+        "interaction": "#1d4ed8",
+        "interactionDark": "#3f51b5"
       }
     },
   },
