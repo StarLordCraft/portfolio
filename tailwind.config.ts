@@ -10,13 +10,29 @@ const config: Config = {
   theme: {
     extend: {
       colors:{
-        "backgroundLight": "#FFF",
-        "backgroundDark": "#181818",
-        "interaction": "#1d4ed8",
-        "interactionDark": "#3f51b5"
-      }
+        primaryLight: "#FFF",
+        primaryDark: '#131424',
+        
+        secondaryLight: "#FFF",
+        secondaryDark: '#393A47',
+        
+        interaction: "#1d4ed8",
+        interactionDark: "#3f51b5",
+
+        accent: '#F13024',
+      },
+
+      animation: {
+        'spin-slow': 'spin 6s linear infinite',
+      },
+      
+      container: {
+        padding: {
+          DEFAULT: '15px',
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar')],
 }
 export default config
