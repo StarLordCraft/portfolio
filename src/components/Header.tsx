@@ -11,7 +11,7 @@ export default function Header()
      px-16 xl:px-0 xl:h-[90px] mt-5">
         <section className="container mx-auto">
             <div className="flex flex-col justify-between
-             items-center gap-y-6 py-8">
+             items-center gap-y-1">
                 <div className="flex justify-between items-center w-full">
                     <Link href={"/"}>
                         <Image src={'/logo.png'} width={40} height={40}

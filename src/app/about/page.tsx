@@ -37,11 +37,11 @@ const aboutData = [
           <SiFramer />,
           <FaWordpress />,
         ],
-      },
+      }as const,
       {
         title: 'UI/UX Design',
         icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
-      },
+      }as const,
     ],
   },
   {
@@ -50,11 +50,11 @@ const aboutData = [
       {
         title: 'Webby Awards - Honoree',
         stage: '2011 - 2012',
-      },
+      }as const,
       {
         title: 'Adobe Design Achievement Awards - Finalist',
         stage: '2009 - 2010',
-      },
+      }as const,
     ],
   },
   {
@@ -63,15 +63,15 @@ const aboutData = [
       {
         title: 'UX/UI Designer - XYZ Company',
         stage: '2012 - 2023',
-      },
+      }as const,
       {
         title: 'Web Developer - ABC Agency',
         stage: '2010 - 2012',
-      },
+      }as const,
       {
         title: 'Intern - DEF Corporation',
         stage: '2008 - 2010',
-      },
+      }as const,
     ],
   },
   {
@@ -80,15 +80,15 @@ const aboutData = [
       {
         title: 'Web Development - ABC University, LA, CA',
         stage: '2011',
-      },
+      }as const,
       {
         title: 'Computer Science Diploma - AV Technical Institute',
         stage: '2009',
-      },
+      }as const,
       {
         title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
         stage: '2006',
-      },
+      }as const,
     ],
   },
 ];
@@ -97,7 +97,7 @@ export default function Page()
 {
     const [index, setIndex] = useState <number> (0);
     return (
-        <section className="h-full bg-primaryDark/30 pu-32 text-cente xl:text-left">
+        <section className="h-full dark:bg-primaryDark/30 py-32 text-center xl:text-left">
             <Circles />
             <div className="hidden xl:flex absolute bottom-0 -left-[376px]
              fadeInRight">
@@ -113,8 +113,8 @@ export default function Page()
                   return (
                     <section key={itemIndex}
                     className="cursor-pointer capitalize xl:text-lg
-                    relative after:w-8 after: h-[2px] after:bg-white after:">
-
+                    relative after:w-8 after:h-[2px] after:bg-white after:-bottom-1">
+                      {item.title}
                     </section>
                   )
                 })}
