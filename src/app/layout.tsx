@@ -24,6 +24,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200&display=swap" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={`${inter.className}transition-all duration-300 bg-backgroundLight dark:bg-backgroundDark bg-no-repeat bg-cover w-screen h-screen`}>
         <TopLeftImage />
