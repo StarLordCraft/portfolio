@@ -1,13 +1,14 @@
 import Image from 'next/image'
 
 import ProjectsBtn from '@/components/ProjectsBtn';
+import Avatar from '@/components/Avatar';
 
 export default function Home() {
   return (
-    <section className='bg-primaryLight/10 h-full'>
-      <div className='w-full h-full
+    <div className='bg-primaryLight/10 h-full'>
+      <main className='w-full h-full
       dark:bg-gradient-to-r dark:from-primaryDark/10 dark:via-black/30 dark:to-black/10'>
-        <div className='text-center flex flex-col justify-center xl:pt-40
+        <section className='text-center flex flex-col justify-center xl:pt-40
         xl:text-left h-full container mx-auto'>
           <h1 className='h1 dark:text-white fadeInDown'>
             Transforming Ideas <br/> Into 
@@ -25,8 +26,20 @@ export default function Home() {
          <div className='flex justify-center xl:hidden relative fadeInDown'>
            <ProjectsBtn/>
          </div>
-        </div>
-      </div>
-    </section>
+        </section>
+        <section className='w-[1200px] h-full absolute right-0 bottom-0'>
+          <div className='dark:xl:bg-explosion dark:xl:bg-right dark:xl:bg-no-repeat
+           w-full h-full absolute mix-blend-color-dodge translate-z-0 fadeInUp'>
+          </div>
+
+            <div></div>
+          
+            <div className='w-full h-full max-w-[737px] max-h-[678px] 
+            absolute -bottom-32 lg:bottom-0 lg:right-[8%]'>
+              <Avatar />
+            </div>
+        </section>
+      </main>
+    </div>
   )
 }
