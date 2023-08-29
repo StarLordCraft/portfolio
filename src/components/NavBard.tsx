@@ -14,20 +14,20 @@ import Link from "next/link";
 import { useEffect } from 'react';
 
 export const navData = [
-    { name: 'home', path: '/', icon: <HiHome /> },
-    { name: 'about', path: '/about', icon: <HiUser /> },
-    { name: 'services', path: '/services', icon: <HiRectangleGroup /> },
-    { name: 'work', path: '/work', icon: <HiViewColumns /> },
+    { name: 'home', path: '/', icon: <HiHome /> } as const,
+    { name: 'about', path: '/about', icon: <HiUser /> } as const,
+    { name: 'services', path: '/services', icon: <HiRectangleGroup /> } as const,
+    { name: 'work', path: '/work', icon: <HiViewColumns /> } as const,
     {
       name: 'testimonials',
       path: '/testimonials',
       icon: <HiChatBubbleBottomCenterText />,
-    },
+    } as const,
     {
       name: 'contact',
       path: '/contact',
       icon: <HiEnvelope />,
-    },
+    } as const,
   ];
 export default function NavBar()
 {
@@ -47,20 +47,28 @@ export default function NavBar()
 
         {navData.map((link, index) => {
             return (
-            <Link href={link.path} key={index}
-            className={`${link.path == pathName && 'text-indigo-500 dark:text-accent'}
-            relative flex items-center group hover:text-indigo-500 hover:dark:text-accent
-            transition-all duration-300`}>
-                <div className='absolute pr-14 right-0 hidden xl:group-hover:flex'>
-                    <div className='bg-black dark:bg-white relative flex text-white dark:text-black items-center
-                    p-[6px]'>
+                <Link href={link.path} key={index}
+                className={`${link.path == pathName && 'text-indigo-500 dark:text-accent'}
+                relative flex items-center group hover:text-indigo-500 hover:dark:text-accent
+                transition-all duration-300`}>
+                    <div className='absolute pr-14 right-0 hidden xl:group-hover:flex'>
                         
-                        <div className='text-[12px]'>{link.name}</div>
+                        <div className='bg-black dark:bg-white relative flex text-white dark:text-black items-center
+                        p-[6px] rounded-[3px]'>
+
+                            <div className='text-[12px] leading-none font-semibold capitalize'>
+                              {link.name}
+                            </div>
+
+                            <div className='border-solid border-l-black dark:border-l-white
+                            border-l-8 border-y-transparent border-y-[6px] border-r-0
+                            absolute -right-2'></div>
+                        </div>
                     </div>
-                </div>
-                <div>{link.icon}</div>
-            </Link>
-                )
+
+                    <div>{link.icon}</div>
+                </Link>
+            )
         })}
       </div>
      </nav>

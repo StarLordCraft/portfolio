@@ -39,7 +39,7 @@ export default function ToggleTheme()
       isDarkTheme
         ? 'bg-gray-800 shadow-sm shadow-white'
         : 'bg-white shadow-sm shadow-black'
-    } flex items-center justify-evenly min-h-[40px] min-w-[80px] transition-colors duration-300 rounded-full relative`}
+    } flex items-center justify-evenly h-[40px] w-[80px] transition-colors duration-300 rounded-full relative`}
     onClick={setTheme}
   >
     <span
