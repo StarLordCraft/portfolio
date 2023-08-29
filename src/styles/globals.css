@@ -7,6 +7,11 @@
 html{
     scroll-behavior: smooth;
 }
+.blur{
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #f13024;
+    z-index: -100;
+}
 
 .translate-z-0 {
     transform: translateZ(0px);

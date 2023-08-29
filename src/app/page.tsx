@@ -1,12 +1,14 @@
 import Image from 'next/image'
 
 import { motion } from 'framer-motion';
-import { fadeIn } from '@/utils/fadeIn';
+import { fadeIn } from '@/utils/variants';
+
+import ProjectsBtn from '@/components/ProjectsBtn';
 
 export default function Home() {
   return (
-    <section className='bg-primaryLight/20 h-full'>
-      <div className='w-full h-full bg-gradient-to-br from-purple-500 to-stone-100
+    <section className='bg-primaryLight/10 h-full'>
+      <div className='w-full h-full
       dark:bg-gradient-to-r dark:from-primaryDark/10 dark:via-black/30 dark:to-black/10'>
         <div className='text-center flex flex-col justify-center xl:pt-40
         xl:text-left h-full container mx-auto'>
@@ -19,6 +21,9 @@ export default function Home() {
             in esse dolorum tempore quam asperiores nemo debitis! Dolor consectetur dignissimos
             molestiae maiores est possimus obcaecati provident ipsa dolore?
           </p>
+          <div className='flex justify-center xl:hidden relative'>
+            <ProjectsBtn/>
+          </div>
         </div>
       </div>
     </section>
