@@ -39,7 +39,6 @@ export default function Home() {
             absolute -bottom-32 lg:bottom-0 lg:right-[8%] translate-z-0'>
               <Avatar />
             </div>
-          
         </section>
       </main>
     </div>
