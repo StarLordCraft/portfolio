@@ -21,8 +21,19 @@ import {
   SiAdobephotoshop,
 } from "react-icons/si";
 
+interface InfoItem {
+  title: string;
+  stage?: string;
+  icons?: React.JSX.Element[];
+}
 
-const aboutData = [
+interface AboutDataItem {
+  title: string;
+  info: InfoItem[];
+  icons?: React.JSX.Element[];
+}
+
+const aboutData: AboutDataItem[] = [
   {
     title: 'skills',
     info: [
@@ -97,29 +108,56 @@ export default function Page()
 {
     const [index, setIndex] = useState <number> (0);
     return (
-        <section className="h-full dark:bg-primaryDark/30 py-32 text-center xl:text-left">
+        <section className="h-full dark:bg-primaryDark/30 py-32 text-center dark:text-white xl:text-left">
             <Circles />
             <div className="hidden xl:flex absolute bottom-0 -left-[376px]
              fadeInRight">
               <Avatar />
             </div>
-            <section className="container mx-auto h-full flex flex-col items-center
+            <main className="container mx-auto h-full flex flex-col items-center
              xl:flex-row gap-x-6">
-              <div>
+              <section className="flex-1 flex flex-col justify-center">
 
-              </div>
-              <div>
-                {aboutData.map((item, itemIndex) => {
-                  return (
-                    <section key={itemIndex}
-                    className="cursor-pointer capitalize xl:text-lg
-                    relative after:w-8 after:h-[2px] after:bg-white after:-bottom-1">
-                      {item.title}
-                    </section>
-                  )
-                })}
-              </div>
-            </section>
+              </section>
+
+              <section className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
+                <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
+                  {aboutData.map((item: AboutDataItem, itemIndex: number) => {
+                    return (
+                      <button key={itemIndex}
+                      className={`${index === itemIndex && 'text-indigo-800 dark:text-accent after:w-full after:bg-indigo-800 dark:after:bg-accent'} 
+                      cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-black after:dark:bg-white
+                      after:absolute after:left-0 after:-bottom-1 after:transition-all after:duration-300`}
+                      onClick={() => setIndex(itemIndex)}>
+                        {item.title}
+                      </button>
+                    )
+                  })}
+                </div>
+                <div className="py-2 xl:py-6 flex flex-col gap-y-4 items-center xl:items-start">
+                  {aboutData[index].info.map((item: InfoItem, itemIndex: number) => {
+                    return (
+                      <div key={itemIndex} className="flex-1 flex flex-col md:flex-row 
+                      max-w-max gap-2 items-center dark:text-white">
+                        <div>{item.title}</div>
+                        
+                        <div className="hidden md:flex">-</div>
+                        {item?.stage && <div>{item?.stage}</div>}
+                        
+                        <div className="flex gap-x-4">
+                          {item.icons?.map((icon: React.JSX.Element, iconIndex: number) => {
+                              return (
+                                <div key={iconIndex} className="text-2xl">{icon}</div>
+                              );
+                          })}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </section>
+
+            </main>
         </section>
     );
 }
