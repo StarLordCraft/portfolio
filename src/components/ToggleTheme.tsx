@@ -2,8 +2,13 @@
 
 import { useEffect, useState } from 'react';
 
+import { usePathname } from 'next/navigation';
+
 export default function ToggleTheme()
 {
+  const pathname = usePathname();
+
+  
   let themePrefference: string = 'dark';
   
   useEffect(function detectColorTheme() {
@@ -31,7 +36,7 @@ export default function ToggleTheme()
   const setTheme = async () => {
     setIsDarkTheme((prevTheme) => !prevTheme);
     localStorage.setItem('dark', (!isDarkTheme).toString());
-    window.location.reload();
+    if(pathname == '/')window.location.reload();
   }
 
   return (
