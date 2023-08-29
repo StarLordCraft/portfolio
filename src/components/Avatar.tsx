@@ -6,7 +6,7 @@ export default function Avatar()
             <Image src={'/avatar.png'} 
             width={737} height={678} 
             alt='/'
-            className="w-full h-full"
+            className="w-full h-full translate-z-0"
             />
         </div>
     );
