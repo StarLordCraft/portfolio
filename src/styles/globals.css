@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url("./toggleTheme.css");
+@import url('./animations.css');
 
 html{
     scroll-behavior: smooth;

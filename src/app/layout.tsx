@@ -22,7 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={`${inter.className}transition-all duration-300 bg-backgroundLight dark:bg-backgroundDark bg-no-repeat bg-cover`}>
+      <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200&display=swap" />
+      </head>
+      <body className={`${inter.className}transition-all duration-300 bg-backgroundLight dark:bg-backgroundDark bg-no-repeat bg-cover w-screen h-screen`}>
         <TopLeftImage />
         <NavBar />
         <Header />
