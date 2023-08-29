@@ -97,11 +97,29 @@ export default function Page()
 {
     const [index, setIndex] = useState <number> (0);
     return (
-        <section>
+        <section className="h-full bg-primaryDark/30 pu-32 text-cente xl:text-left">
             <Circles />
-            <div className="hidden xl:flex absolute bottom-0 -left=[376px]">
-
+            <div className="hidden xl:flex absolute bottom-0 -left-[376px]
+             fadeInRight">
+              <Avatar />
             </div>
+            <section className="container mx-auto h-full flex flex-col items-center
+             xl:flex-row gap-x-6">
+              <div>
+
+              </div>
+              <div>
+                {aboutData.map((item, itemIndex) => {
+                  return (
+                    <section key={itemIndex}
+                    className="cursor-pointer capitalize xl:text-lg
+                    relative after:w-8 after: h-[2px] after:bg-white after:">
+
+                    </section>
+                  )
+                })}
+              </div>
+            </section>
         </section>
     );
 }
