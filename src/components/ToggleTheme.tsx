@@ -21,7 +21,7 @@ export default function ToggleTheme()
   }, []);
 
   const [isDarkTheme, setIsDarkTheme] = useState <boolean> (themePrefference == 'dark');
-  
+
   useEffect(() => {
       const colorTheme = isDarkTheme ? 'dark' : 'light';
       document.documentElement.classList.remove('dark', 'light');
