@@ -31,6 +31,7 @@ export default function ToggleTheme()
   const setTheme = async () => {
     setIsDarkTheme((prevTheme) => !prevTheme);
     localStorage.setItem('dark', (!isDarkTheme).toString());
+    window.location.reload();
   }
 
   return (
