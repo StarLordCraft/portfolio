@@ -22,6 +22,13 @@ const config: Config = {
         accent: '#F13024',
       },
 
+      backgroundImage: {
+        explosion: 'url("/bg-explosion.png")',
+        circles: 'url("/bg-circles.png")',
+        circleStar: 'url("/circle-star.svg")',
+        backgroundDark: 'url("/site-bg-dark.svg")',
+      },
+
       animation: {
         'spin-slow': 'spin 6s linear infinite',
       },

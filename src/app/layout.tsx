@@ -2,7 +2,9 @@ import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
+import TopLeftImage from '@/components/TopLeftImage';
 import NavBar from '@/components/NavBard';
+import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -19,11 +21,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={`${inter.className}transition-all duration-300 bg-backgroundLight dark:bg-backgroundDark`}>
+      <body className={`${inter.className}transition-all duration-300 bg-backgroundLight dark:bg-backgroundDark bg-no-repeat bg-cover`}>
+        <TopLeftImage />
         <NavBar />
+        <Header />
         {children}
         <Footer />
-        </body>
+      </body>
     </html>
   )
 }
