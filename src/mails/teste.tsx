@@ -23,7 +23,7 @@ import {
     : '';
   
 function TwitchResetPasswordEmail({
-    username = 'alisson',
+    username = 'Rafael',
     updatedDate = new Date('June 23, 2022 4:06:00 pm UTC'),
   }: TwitchResetPasswordEmailProps){
     const formattedDate = new Intl.DateTimeFormat('en', {

@@ -11,7 +11,7 @@ import {
 
 import Link from "next/link";
 
-import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 export const navData = [
     { name: 'home', path: '/', icon: <HiHome /> } as const,
@@ -31,10 +31,7 @@ export const navData = [
   ];
 export default function NavBar()
 {
-    let pathName: string = '/'; 
-    useEffect(() => {
-        pathName = window.location.pathname;
-    }, [pathName])
+    const pathName = usePathname();
 
     return (
      <nav className="flex flex-col items-center gap-y-4 xl:justify-center

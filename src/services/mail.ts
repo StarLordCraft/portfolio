@@ -19,8 +19,8 @@ export default class Mail{
         private attachments?: MailAttachment[],
     ){}
 
-    async renderMail(Component: ReactElement) {
-        this.message = await render(Component);
+    renderMail(Component: ReactElement) {
+        this.message = render(Component);
     }
 
     async sendMail(): Promise<string> 
