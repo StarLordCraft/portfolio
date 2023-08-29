@@ -3,12 +3,13 @@
 import { Particles } from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 
-import { useCallback } from 'react';
+import React, { useCallback } from 'react';
 
 export default function ParticlesContainer()
 {
     const particlesInit = useCallback(async (engine: any) => {
         await loadFull(engine);
+        console.log('pronto');
     }, []);
 
     const particlesLoaded = useCallback(async () => {}, []);
@@ -91,7 +92,7 @@ export default function ParticlesContainer()
                         detectRetina:  true,
                     }
                 }
-            }}
+            }}            
         />
     )
 }
