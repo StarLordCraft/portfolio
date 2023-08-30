@@ -7,17 +7,17 @@ import {
 } from 'react-icons/rx';
 
 
-import ServiceSlider from '@/components/services/ServiceSlider';
+import WorkSlider from '@/components/work/WorkSlider';
 import Bulb from '@/components/Bulb';
 import Circles from '@/components/Circles';
 
-export interface ServicesData {
+export interface WorkData {
     readonly icon: React.JSX.Element;
     readonly title: string;
     readonly description: string;
 }
 
-const servicesData: ServicesData[] = [
+const workData: WorkData[] = [
     {
         icon: <RxCrop />,
         title: "Branding",
@@ -67,8 +67,8 @@ export default function Page()
                         </p>
                     </section>
                     <div className='w-full xl:w-[60%] fadeInDown'>
-                        <ServiceSlider 
-                        servicesData={servicesData} />
+                        <WorkSlider 
+                        workData={workData} />
                     </div>
                 </div>
             </div>
