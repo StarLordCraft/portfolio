@@ -1,7 +1,6 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
 import { AboutDataItem, InfoItem } from '@/app/(pages)/about/page';
 
@@ -34,10 +33,10 @@ export default function AboutHero({
       </div>
       <div className="py-2 xl:py-6 flex flex-col gap-y-4 items-center xl:items-start">
         {aboutData[index].info.map(
-          (item: InfoItem, itemIndex: number) => {
+          (item: InfoItem, index: number) => {
             return (
               <div
-                key={itemIndex}
+                key={index}
                 className="flex-1 flex flex-col md:flex-row
                     max-w-max gap-x-2 gap-y-2 md:gap-y-0 items-center justify-center dark:text-white">
                 <div className="font-bold mb-0">{item.title}</div>

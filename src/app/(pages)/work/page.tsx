@@ -1,11 +1,3 @@
-import {
-  RxCrop,
-  RxDesktop,
-  RxPencil2,
-  RxReader,
-  RxRocket,
-} from 'react-icons/rx';
-
 import WorkSlider from '@/components/work/WorkSlider';
 import Bulb from '@/components/Bulb';
 import Circles from '@/components/Circles';
@@ -82,7 +74,8 @@ export default function Page() {
               </span>
               .
             </h2>
-            <p className="fadeInUp mb-4 max-2-[400px] mx-auto lg:mx-0 text-black dark:text-white">
+            <p className="fadeInUp mb-4 max-2-[400px] mx-auto lg:mx-0 
+            text-black dark:text-white">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Iusto nulla eum sapiente voluptate architecto, ab
               recusandae eligendi laudantium odio quod. Dolorem, unde
