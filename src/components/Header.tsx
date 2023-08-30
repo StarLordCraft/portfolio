@@ -8,13 +8,11 @@ export default function Header() {
   return (
     <header
       className="absolute z-30 w-full flex items-center
-     px-16 xl:px-0 xl:h-[90px] mt-5"
-    >
+     px-16 xl:px-0 xl:h-[90px] mt-5">
       <section className="container mx-auto">
         <div
           className="flex flex-col justify-between
-             items-center gap-y-4"
-        >
+             items-center gap-y-4">
           <div className="flex justify-between items-center w-full">
             <Link href={"/"}>
               <Image

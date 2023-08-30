@@ -22,14 +22,12 @@ export default function Counter({
     <div className={`${!last && divisorStyles} relative flex-1`}>
       <h3
         className="text-2xl xl:text-4xl font-extrabold text-indigo-500 
-            dark:text-accent mb-2"
-      >
+            dark:text-accent mb-2">
         <CountUp start={start} end={end} duration={duration} />+
       </h3>
       <div
         className="text-xs uppercase tracking-[1px] leading-[1.4]
-            max-w-[100px]"
-      >
+            max-w-[100px]">
         {title}
       </div>
     </div>

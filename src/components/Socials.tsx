@@ -15,8 +15,7 @@ export default function Socials() {
       <Link
         href="https://www.linkedin.com/in/rafael-alves-087456210/"
         target="_blank"
-        className="block p-0.5 group"
-      >
+        className="block p-0.5 group">
         <ImLinkedin2
           className="group-hover:text-indigo-500 dark:group-hover:text-accent text-black dark:text-white
                  text-3xl"
@@ -25,8 +24,7 @@ export default function Socials() {
       <Link
         href="https://github.com/StarLordCraft"
         target="_blank"
-        className="block p-0.5 group rounded-full"
-      >
+        className="block p-0.5 group rounded-full">
         <ImGithub
           className="group-hover:text-indigo-500 dark:group-hover:text-accent text-black dark:text-white
                  text-3xl"

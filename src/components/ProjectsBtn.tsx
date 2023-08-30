@@ -8,8 +8,7 @@ export default function ProjectsBtn() {
       <Link
         href="/work"
         className="relative w-[200px] h-[200px] flex items-center justify-center
-             bg-circleStar bg-cover bg-center bg-no-repeat group z-10"
-      >
+             bg-circleStar bg-cover bg-center bg-no-repeat group z-10">
         <Image
           src="/rounded-text.png"
           alt=""

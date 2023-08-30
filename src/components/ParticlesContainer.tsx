@@ -8,7 +8,8 @@ import React, { useCallback, useEffect, useState } from "react";
 
 export default function ParticlesContainer() {
   const [linkColor, setLinkColor] = useState<string>("#e5d393");
-  const [particleColor, setParticleColor] = useState<string>("#e68e2e");
+  const [particleColor, setParticleColor] =
+    useState<string>("#e68e2e");
 
   useEffect(function detectColorTheme() {
     let themePrefference: string;
@@ -27,7 +28,9 @@ export default function ParticlesContainer() {
     }
 
     setLinkColor(themePrefference === "dark" ? "#e5d393" : "#000");
-    setParticleColor(themePrefference === "dark" ? "#e68e2e" : "#000");
+    setParticleColor(
+      themePrefference === "dark" ? "#e68e2e" : "#000"
+    );
   }, []);
 
   const particlesInit = useCallback(async (engine: Engine) => {

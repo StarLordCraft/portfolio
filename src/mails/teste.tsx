@@ -34,11 +34,16 @@ function TwitchResetPasswordEmail({
   return (
     <Html>
       <Head />
-      <Preview>You updated the password for your Twitch account</Preview>
+      <Preview>
+        You updated the password for your Twitch account
+      </Preview>
       <Body style={main}>
         <Container style={container}>
           <Section style={logo}>
-            <Img width={114} src={`${baseUrl}/static/twitch-logo.png`} />
+            <Img
+              width={114}
+              src={`${baseUrl}/static/twitch-logo.png`}
+            />
           </Section>
           <Section style={sectionsBorders}>
             <Row>
@@ -51,11 +56,12 @@ function TwitchResetPasswordEmail({
             <Text style={paragraph}>Hi {username},</Text>
             <Text style={paragraph}>
               You updated the password for your Twitch account on{" "}
-              {formattedDate}. If this was you, then no further action is
-              required.
+              {formattedDate}. If this was you, then no further action
+              is required.
             </Text>
             <Text style={paragraph}>
-              However if you did NOT perform this password change, please
+              However if you did NOT perform this password change,
+              please
               <Link href="#" style={link}>
                 {" "}
                 reset your account password
@@ -63,9 +69,9 @@ function TwitchResetPasswordEmail({
               immediately.
             </Text>
             <Text style={paragraph}>
-              Remember to use a password that is both strong and unique to your
-              Twitch account. To learn more about how to create a strong and
-              unique password,
+              Remember to use a password that is both strong and
+              unique to your Twitch account. To learn more about how
+              to create a strong and unique password,
               <Link href="#" style={link}>
                 {" "}
                 click here.
@@ -88,11 +94,19 @@ function TwitchResetPasswordEmail({
 
         <Section style={footer}>
           <Row>
-            <Column align="right" style={{ width: "50%", paddingRight: "8px" }}>
-              <Img src={`${baseUrl}/static/twitch-icon-twitter.png`} />
+            <Column
+              align="right"
+              style={{ width: "50%", paddingRight: "8px" }}>
+              <Img
+                src={`${baseUrl}/static/twitch-icon-twitter.png`}
+              />
             </Column>
-            <Column align="left" style={{ width: "50%", paddingLeft: "8px" }}>
-              <Img src={`${baseUrl}/static/twitch-icon-facebook.png`} />
+            <Column
+              align="left"
+              style={{ width: "50%", paddingLeft: "8px" }}>
+              <Img
+                src={`${baseUrl}/static/twitch-icon-facebook.png`}
+              />
             </Column>
           </Row>
           <Text style={{ textAlign: "center", color: "#706a7b" }}>

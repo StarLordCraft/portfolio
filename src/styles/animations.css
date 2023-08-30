@@ -1,64 +1,64 @@
 @keyframes fadeInDown {
-    0% {
-      transform: translateY(-10%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0%);
-      opacity: 1;
-    }
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
   }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
 
 @keyframes fadeInUp {
-    0% {
-      transform: translateY(10%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0%);
-      opacity: 1;
-    }
+  0% {
+    transform: translateY(10%);
+    opacity: 0;
   }
-  @keyframes fadeInRight {
-    0% {
-      transform: translateX(10%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0%);
-      opacity: 1;
-    }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
   }
-  @keyframes fadeInLeft {
-    0% {
-      transform: translateX(-10%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0%);
-      opacity: 1;
-    }
+}
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(10%);
+    opacity: 0;
   }
-  
-  .fadeInDown {
-    animation-name: fadeInDown;
-    animation-duration: 2s;
-    animation-timing-function: ease-in;
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
   }
+}
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
 
-  .fadeInUp {
-    animation-name: fadeInUp;
-    animation-duration: 2s;
-    animation-timing-function: ease-in;
-  }
+.fadeInDown {
+  animation-name: fadeInDown;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
 
-  .fadeInRight {
-    animation-name: fadeInRight;
-    animation-duration: 2s;
-    animation-timing-function: ease-in;
-  }
-  .fadeInLeft {
-    animation-name: fadeInLeft;
-    animation-duration: 2s;
-    animation-timing-function: ease-in;
-  }
+.fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+.fadeInLeft {
+  animation-name: fadeInLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}

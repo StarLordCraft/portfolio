@@ -33,16 +33,14 @@ export default function ServiceSlider({
         clickable: true,
       }}
       modules={[FreeMode, Pagination]}
-      className="h-[240px] sm:h-[348px]"
-    >
+      className="h-[240px] sm:h-[348px]">
       {servicesData.map((service: ServicesData, index: number) => {
         return (
           <SwiperSlide key={index} className="overflow-y-auto">
             <section
               className="bg-[rgba(55,47,123,0.15)] hover:bg-[rgba(89,65,169,0.15)]
                     h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 transition-all duration-300
-                    sm:gap-x-0 group cursor-pointer text-black dark:text-white/40"
-            >
+                    sm:gap-x-0 group cursor-pointer text-black dark:text-white/40">
               <div className="text-4xl text-indigo-500 dark:text-accent font-bold">
                 {service.icon}
               </div>

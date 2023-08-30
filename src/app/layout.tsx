@@ -30,8 +30,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.className}transition-all duration-300 bg-backgroundLight dark:bg-backgroundDark bg-no-repeat bg-cover w-screen h-screen`}
-      >
+        className={`${inter.className}transition-all duration-300 bg-backgroundLight dark:bg-backgroundDark bg-no-repeat bg-cover w-screen h-screen`}>
         <TopLeftImage />
         <NavBar />
         <Header />

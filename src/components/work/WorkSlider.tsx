@@ -1,63 +1,53 @@
 "use client";
 
-import { FreeMode, Pagination } from "swiper/modules";
+import Image from "next/image";
+
+import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { RxArrowTopRight } from "react-icons/rx";
+import { BsArrowRight } from "react-icons/bs";
 
-import { WorkData } from "@/app/(pages)/work/page";
+import { WorkData, Slide } from "@/app/(pages)/work/page";
 
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
-export default function WorkSlider({ workData }: { workData: WorkData[] }) {
+export default function WorkSlider({
+  workData,
+}: {
+  workData: WorkData;
+}) {
   return (
     <Swiper
-      breakpoints={{
-        520: {
-          slidesPerView: 1,
-          spaceBetween: 15,
-        },
-        640: {
-          slidesPerView: 3,
-          spaceBetween: 15,
-        },
-      }}
-      freeMode={true}
+      spaceBetween={10}
       pagination={{
         clickable: true,
       }}
-      modules={[FreeMode, Pagination]}
-      className="h-[240px] sm:h-[348px]"
-    >
-      {workData.map((work: WorkData, index: number) => {
+      modules={[Pagination]}
+      className="h-[280px] sm:h-[480px]">
+      {workData.slides.map((slide, index: number) => {
         return (
-          <SwiperSlide key={index} className="overflow-y-auto">
+          <SwiperSlide key={index}>
             <section
-              className="bg-[rgba(55,47,123,0.15)] hover:bg-[rgba(89,65,169,0.15)]
-                    h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 transition-all duration-300
-                    sm:gap-x-0 group cursor-pointer text-black dark:text-white/40"
-            >
-              <div className="text-4xl text-indigo-500 dark:text-accent font-bold">
-                {work.icon}
-              </div>
-
-              <div>
-                <h3 className="text-black dark:text-white font-bold my-2">
-                  {work.title}
-                </h3>
-                <p className="max-w-[350px] leading-normal text-black dark:text-white/40">
-                  {work.description}
-                </p>
-              </div>
-
-              <div className="text-3xl">
-                <RxArrowTopRight
-                  className="group-hover:rotate-45 group-hover:text-indigo-500
-                            dark:group-hover:text-accent transition-all duration-300"
-                />
-              </div>
+              className="grid grid-cols-2 grod-rows-2 gap-4
+                cursor-pointer">
+              {slide.images.map((image, index: number) => {
+                return (
+                  <section
+                    className="relative rounded-lg overflow-hidden
+                     flex items-center">
+                    <div>
+                      <Image
+                        src={image.path}
+                        width={500}
+                        height={500}
+                        alt=""
+                      />
+                    </div>
+                  </section>
+                );
+              })}
             </section>
           </SwiperSlide>
         );

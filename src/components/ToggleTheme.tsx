@@ -49,27 +49,23 @@ export default function ToggleTheme() {
           ? "bg-gray-800 shadow-sm shadow-white"
           : "bg-white shadow-sm shadow-black"
       } flex items-center justify-evenly h-[40px] w-[80px] transition-colors duration-300 rounded-full relative`}
-      onClick={setTheme}
-    >
+      onClick={setTheme}>
       <span
         className={`material-symbols-outlined relative z-20 
-      ${isDarkTheme ? "text-white" : "invisible"}`}
-      >
+      ${isDarkTheme ? "text-white" : "invisible"}`}>
         dark_mode
       </span>
 
       <span
         className={`material-symbols-outlined relative z-20 
-      ${isDarkTheme ? "invisible" : "text-white"}`}
-      >
+      ${isDarkTheme ? "invisible" : "text-white"}`}>
         light_mode
       </span>
 
       <div
         className={`absolute z-10 w-10 h-10 bg-indigo-500 rounded-full ${
           isDarkTheme ? "animate-move-left" : "animate-move-right"
-        }`}
-      ></div>
+        }`}></div>
     </button>
   );
 }
