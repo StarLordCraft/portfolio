@@ -35,7 +35,7 @@ export default function NavBar()
 
     return (
      <nav className="flex flex-col items-center gap-y-4 xl:justify-center
-      fixed h-max bottom-0 xl:right-[2%] z-10 w-full xl:w-16 xl:max-w-md
+      fixed h-max bottom-0 xl:right-[2%] z-20 w-full xl:w-16 xl:max-w-md
       xl:h-screen">
 
       <div className='flex w-full xl:flex-col items-center justify-between
