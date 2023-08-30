@@ -28,16 +28,16 @@ import {
 } from "react-icons/si";
 
 export interface InfoItem {
-  title: string;
-  stage?: string;
-  icons?: React.JSX.Element[];
-  link?: Url;
+  readonly title: string;
+  readonly stage?: string;
+  readonly icons?: React.JSX.Element[];
+  readonly link?: Url;
 }
 
 export interface AboutDataItem {
-  title: string;
-  info: InfoItem[];
-  icons?: React.JSX.Element[];
+  readonly title: string;
+  readonly info: InfoItem[];
+  readonly icons?: React.JSX.Element[];
 }
 
 const aboutData: AboutDataItem[] = [
@@ -57,7 +57,7 @@ const aboutData: AboutDataItem[] = [
           <FaReact />,
           <FaVuejs />,
         ],
-      }as const,
+      },
       {
         title: 'Backend Development',
         icons: [
@@ -69,7 +69,7 @@ const aboutData: AboutDataItem[] = [
           <SiMongodb />,
           <SiFirebase />
         ],
-      }as const,
+      },
     ],
   },
   {
@@ -84,17 +84,17 @@ const aboutData: AboutDataItem[] = [
         title: 'Silver Medal - OBA',
         stage: '2020 - 2021',
         link: 'http://www.oba.org.br/site/index.php/zerouminforma.com.br/estudante-da-escola-do-sesi-de-dourados-recebe-medalha-de-ouro-na-olimpiada-brasileira-de-astronomia-e-astronautica/?p=conteudo&idcat=22&pag=conteudo&acao=mostra&idaluno=2483&olimp=oba&ed=2020',
-      }as const,
+      },
       {
         title: 'Gold Medal - OBA',
         stage: '2021 - 2022',
         link: 'http://www.oba.org.br/site/index.php/zerouminforma.com.br/estudante-da-escola-do-sesi-de-dourados-recebe-medalha-de-ouro-na-olimpiada-brasileira-de-astronomia-e-astronautica/?p=conteudo&idcat=22&pag=conteudo&acao=mostra&idaluno=413251&olimp=oba&ed=2021',
-      }as const,
+      },
       {
         title: 'Bronze Medal - OBA',
         stage: '2022 - 2023',
         link: 'http://www.oba.org.br/site/index.php/zerouminforma.com.br/estudante-da-escola-do-sesi-de-dourados-recebe-medalha-de-ouro-na-olimpiada-brasileira-de-astronomia-e-astronautica/?p=conteudo&idcat=22&pag=conteudo&acao=mostra&idaluno=949023&olimp=oba&ed=2022',
-      }as const,
+      },
     ],
   },
   {
@@ -103,15 +103,15 @@ const aboutData: AboutDataItem[] = [
       {
         title: 'UX/UI Designer - XYZ Company',
         stage: '2012 - 2023',
-      }as const,
+      },
       {
         title: 'Web Developer - ABC Agency',
         stage: '2010 - 2012',
-      }as const,
+      },
       {
         title: 'Intern - DEF Corporation',
         stage: '2008 - 2010',
-      }as const,
+      },
     ],
   },
   {
@@ -120,15 +120,15 @@ const aboutData: AboutDataItem[] = [
       {
         title: 'Web Development - ABC University, LA, CA',
         stage: '2011',
-      }as const,
+      },
       {
         title: 'Computer Science Diploma - AV Technical Institute',
         stage: '2009',
-      }as const,
+      },
       {
         title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
         stage: '2006',
-      }as const,
+      },
     ],
   },
 ];

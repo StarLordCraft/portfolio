@@ -13,21 +13,27 @@ import Link from "next/link";
 
 import { usePathname } from 'next/navigation';
 
-export const navData = [
-    { name: 'home', path: '/', icon: <HiHome /> } as const,
-    { name: 'about', path: '/about', icon: <HiUser /> } as const,
-    { name: 'services', path: '/services', icon: <HiRectangleGroup /> } as const,
-    { name: 'work', path: '/work', icon: <HiViewColumns /> } as const,
+interface NavData{
+  readonly name: string;
+  readonly path: string;
+  readonly icon: React.JSX.Element;
+} 
+
+const navData: NavData[] = [
+    { name: 'home', path: '/', icon: <HiHome /> },
+    { name: 'about', path: '/about', icon: <HiUser /> },
+    { name: 'services', path: '/services', icon: <HiRectangleGroup /> },
+    { name: 'work', path: '/work', icon: <HiViewColumns /> },
     {
       name: 'testimonials',
       path: '/testimonials',
       icon: <HiChatBubbleBottomCenterText />,
-    } as const,
+    },
     {
       name: 'contact',
       path: '/contact',
       icon: <HiEnvelope />,
-    } as const,
+    },
   ];
 export default function NavBar()
 {

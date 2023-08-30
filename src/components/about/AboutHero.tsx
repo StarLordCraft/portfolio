@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-import { AboutDataItem, InfoItem } from "@/app/about/page";
+import { AboutDataItem, InfoItem } from "@/app/(pages)/about/page";
 
 export default function AboutHero({ aboutData }: 
     {aboutData: AboutDataItem[]})
