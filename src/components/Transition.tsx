@@ -18,7 +18,7 @@ const transitionVariants = {
   },
 };
 
-export function Transition() {
+export function Container() {
   return (
     <>
       <motion.div
@@ -63,7 +63,7 @@ export function Transition() {
   );
 }
 
-export default function ({
+export default function Transition({
   children,
 }: {
   children: React.ReactNode;
@@ -74,7 +74,7 @@ export default function ({
       <motion.div
         className='h-full'
         key={route}>
-        <Transition />
+        <Container />
         {children}
       </motion.div>
     </AnimatePresence>
