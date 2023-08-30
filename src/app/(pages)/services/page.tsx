@@ -6,7 +6,6 @@ import {
     RxPencil2,
     RxReader,
     RxRocket,
-    RxArrowTopRight,
 } from 'react-icons/rx';
 
 
@@ -46,7 +45,7 @@ const servicesData: ServicesData[] = [
     },
     {
         icon: <RxRocket />,
-        title: "Copywriting",
+        title: "SEO",
         description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt eaque, reiciendis, dolor atque, expedita voluptatibus ipsa impedit a repellat non quia! Sed nemo aperiam tenetur provident impedit modi ullam quae.'
     },
 ]
@@ -54,18 +53,17 @@ const servicesData: ServicesData[] = [
 export default function Page()
 {
     return (
-        <div className='g-full dark:bg-primaryDark/30 py-32 flex items-center
+        <div className='h-full dark:bg-primaryDark/30 py-36 flex items-center
         dark:text-white'>
             <Circles />
             <div className="container mx-auto">
                 <div className='flex flex-col xl:flex-row gap-x-8'>
                     <section className='text-center flex xl:w-[30vw] flex-col
                     lg:text-left mb-4 xl:mb-0'>
-                        <h2 className='h2 xl:mt-8'>My 
-                        <span className='text-indigo-500 dark:text-accent'>
+                        <h2 className='h2 xl:mt-8 fadeInUp'>My <span className='text-indigo-500 dark:text-accent'>
                             Services
                         </span>.</h2>
-                        <p className='mb-4 max-2-[400px] mx-auto lg:mx-0'>
+                        <p className='fadeInUp mb-4 max-2-[400px] mx-auto lg:mx-0 text-black dark:text-white'>
                             Lorem ipsum dolor sit amet consectetur adipisicing 
                             elit. Iusto nulla eum sapiente voluptate architecto,
                             ab recusandae eligendi laudantium odio quod. Dolorem,
@@ -73,7 +71,10 @@ export default function Page()
                             dicta perferendis.
                         </p>
                     </section>
-                    <ServiceSlider servicesData={servicesData} />
+                    <div className='w-full xl:w-[60%] fadeInUp'>
+                        <ServiceSlider 
+                        servicesData={servicesData} />
+                    </div>
                 </div>
             </div>
             <Bulb />

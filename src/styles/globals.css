@@ -17,18 +17,32 @@ html{
 .translate-z-0 {
     transform: translateZ(0px);
   }
-  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-  .swiper-pagination-horizontal.swiper-pagination-bullets
+  .dark .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .dark .swiper-pagination-horizontal.swiper-pagination-bullets
     .swiper-pagination-bullet {
     background-color: #f13024;
   }
   
-  .swiper-button-next:after,
-  .swiper-button-prev:after,
-  .swiper-button-next:after,
-  .swiper-rtl .swiper-button-prev:after {
+  .dark .swiper-button-next:after,
+  .dark .swiper-button-prev:after,
+  .dark .swiper-button-next:after,
+  .dark .swiper-rtl .swiper-button-prev:after {
     color: #f13024;
   }
+
+  .light .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .light .swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    background-color: #3f51b5;
+  }
+  
+  .light .swiper-button-next:after,
+  .light .swiper-button-prev:after,
+  .light .swiper-button-next:after,
+  .light .swiper-rtl .swiper-button-prev:after {
+    color: #3f51b5;
+  }
+
   
   @layer base {
     body {
