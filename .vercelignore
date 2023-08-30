@@ -1,0 +1,9 @@
+{
+    "src": true,
+    "public": true,
+    "node_modules": true,
+    "package.json": false,
+    "package-lock.json": false,
+    "yarn.lock": false
+  }
+  
