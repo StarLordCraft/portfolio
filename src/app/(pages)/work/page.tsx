@@ -2,54 +2,54 @@ import WorkSlider from "@/components/work/WorkSlider";
 import Bulb from "@/components/Bulb";
 import Circles from "@/components/Circles";
 
-export interface Slide {
+export interface Project {
   readonly title: string;
-  readonly path: string;
+  readonly image: string;
 }
 
 export interface WorkData {
-  readonly slides: { readonly images: Slide[] }[];
+  readonly slides: { readonly content: Project[] }[];
 }
 
 const workData: WorkData = {
   slides: [
     {
-      images: [
+      content: [
         {
           title: "title1",
-          path: "/bg-explosion.png",
+          image: "/bg-explosion.png",
         },
         {
           title: "title2",
-          path: "/bg-explosion.png",
+          image: "/bg-explosion.png",
         },
         {
           title: "title3",
-          path: "/bg-explosion.png",
+          image: "/bg-explosion.png",
         },
         {
           title: "title4",
-          path: "/bg-explosion.png",
+          image: "/bg-explosion.png",
         },
       ],
     },
     {
-      images: [
+      content: [
         {
           title: "title5",
-          path: "/bg-explosion.png",
+          image: "/bg-explosion.png",
         },
         {
           title: "title6",
-          path: "/bg-explosion.png",
+          image: "/bg-explosion.png",
         },
         {
           title: "title7",
-          path: "/bg-explosion.png",
+          image: "/bg-explosion.png",
         },
         {
           title: "title8",
-          path: "/bg-explosion.png",
+          image: "/bg-explosion.png",
         },
       ],
     },

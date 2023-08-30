@@ -1,26 +1,21 @@
-
 import BgModal from './BgModal';
 
+import type { Project } from '@/app/(pages)/work/page';
+
 export default function WorkModal({
-  modalOpen,
-  setModalOpen,
+  project,
+  setProjectDetails,
 }: {
-  modalOpen: boolean;
-  setModalOpen: (isOpen: boolean) => void;
+  project: Project | null;
+  setProjectDetails: (isOpen: null) => void;
 }) {
   const closeModal = () => {
-    setModalOpen(false);
+    setProjectDetails(null);
   };
 
   return (
-    <>
-      {modalOpen && (
-        <BgModal
-          isOpen={modalOpen}
-          setIsOpen={setModalOpen}>
+  <BgModal project={project}>
 
-          </BgModal>
-      )}
-    </>
+  </BgModal>
   );
 }
