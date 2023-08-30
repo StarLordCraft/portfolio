@@ -56,15 +56,15 @@ const aboutData: AboutDataItem[] = [
           <SiTypescript />,
           <FaReact />,
           <FaVuejs />,
-          <SiNextdotjs />,
         ],
       }as const,
       {
         title: 'Backend Development',
         icons: [
           <SiPhp />,
-          <FaLaravel />,
           <SiNodedotjs />,
+          <FaLaravel />,
+          <SiNextdotjs />,
           <SiMysql />,
           <SiMongodb />,
           <SiFirebase />
@@ -135,61 +135,61 @@ const aboutData: AboutDataItem[] = [
 
 export default function Page()
 {
-    return (
-        <section className="h-full dark:bg-primaryDark/30 py-32 text-center dark:text-white xl:text-left">
-            <Circles />
-            <div className="hidden xl:flex absolute bottom-0 -left-[235px]
-             fadeInRight">
-              <Avatar />
-            </div>
-            <main className="container mx-auto h-full flex flex-col items-center
-             xl:flex-row gap-x-6">
+  return (
+    <section className="h-full dark:bg-primaryDark/30 py-32 text-center dark:text-white xl:text-left">
+        <Circles />
+        <div className="hidden xl:flex absolute bottom-0 -left-[235px]
+          fadeInRight">
+          <Avatar />
+        </div>
+        <main className="container mx-auto h-full flex flex-col items-center
+          xl:flex-row gap-x-6">
 
-              <section className="flex-1 flex flex-col justify-center">
-                <h2 className="h2 fadeInRight">
-                  Captivating <span className="text-indigo-500 dark:text-accent">
-                  stories</span> birth magnificent
-                  Apps
-                 </h2>
-                <p className="max-w-[500px] mx-auto xl:mx-9 mb-6 xl:mb-12 px-2 xl:px-0 
-                text-black/60 dark:text-white/60 fadeInRight">
-                  I began freelancing as a developer since 2023. Since then, I've done
-                  remote work for agencies and collabored on digital products for
-                  business and consumer use.
-                </p>
+          <section className="flex-1 flex flex-col justify-center">
+            <h2 className="h2 fadeInRight">
+              Captivating <span className="text-indigo-500 dark:text-accent">
+              stories</span> birth magnificent
+              Apps
+              </h2>
+            <p className="max-w-[500px] mx-auto xl:mx-9 mb-6 xl:mb-12 px-2 xl:px-0 
+            text-black/60 dark:text-white/60 fadeInRight">
+              I began freelancing as a developer since 2023. Since then, I've done
+              remote work for agencies and collabored on digital products for
+              business and consumer use.
+            </p>
 
-                <div className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto
-                xl:mx-0 mb-8 fadeInRight">
-                  <section className="flex flex-1 xl:gap-x-6">
-                    <Counter 
-                    start={0} end={new Date().getFullYear() - 2023 || 1}
-                    duration={8}
-                    title="Years of experience"
-                    />
-                    <Counter 
-                    start={0} end={3}
-                    duration={8}
-                    title="Satisfied Clients"
-                    />
+            <div className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto
+            xl:mx-0 mb-8 fadeInRight">
+              <section className="flex flex-1 xl:gap-x-6">
+                <Counter 
+                start={0} end={new Date().getFullYear() - 2023 || 1}
+                duration={8}
+                title="Years of experience"
+                />
+                <Counter 
+                start={0} end={3}
+                duration={8}
+                title="Satisfied Clients"
+                />
 
-                    <Counter 
-                    start={0} end={30}
-                    duration={8}
-                    title="Finished Projects"
-                    />
-                    
-                    <Counter 
-                    start={0} end={4}
-                    duration={8}
-                    title="Winning Awards"
-                    last={true}
-                    />
-              
-                  </section>
-                </div>
+                <Counter 
+                start={0} end={30}
+                duration={8}
+                title="Finished Projects"
+                />
+                
+                <Counter 
+                start={0} end={4}
+                duration={8}
+                title="Winning Awards"
+                last={true}
+                />
+          
               </section>
-              <AboutHero aboutData={aboutData}/>
-            </main>
-        </section>
-    );
+            </div>
+          </section>
+          <AboutHero aboutData={aboutData}/>
+        </main>
+    </section>
+  );
 }

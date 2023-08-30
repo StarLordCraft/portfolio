@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 import { AboutDataItem, InfoItem } from "@/app/about/page";
 
@@ -10,7 +11,9 @@ export default function AboutHero({ aboutData }:
 
     const [index, setIndex] = useState <number> (0);
     return(
-        <section className="flex flex-col w-full xl:max-w-[48%] h-[480px] overflow-auto md:overflow-hidden">
+        <section
+        className="flex flex-col w-full xl:max-w-[48%] h-[480px] overflow-auto md:overflow-hidden
+        fadeInLeft">
             <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
                 {aboutData.map((item: AboutDataItem, itemIndex: number) => {
                 return (
