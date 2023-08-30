@@ -4,11 +4,11 @@ import {
   RxPencil2,
   RxReader,
   RxRocket,
-} from "react-icons/rx";
+} from 'react-icons/rx';
 
-import ServiceSlider from "@/components/services/ServiceSlider";
-import Bulb from "@/components/Bulb";
-import Circles from "@/components/Circles";
+import ServiceSlider from '@/components/services/ServiceSlider';
+import Bulb from '@/components/Bulb';
+import Circles from '@/components/Circles';
 
 export interface ServicesData {
   readonly icon: React.JSX.Element;
@@ -19,55 +19,55 @@ export interface ServicesData {
 const servicesData: ServicesData[] = [
   {
     icon: <RxCrop />,
-    title: "Branding",
+    title: 'Branding',
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt eaque, reiciendis, dolor atque, expedita voluptatibus ipsa impedit a repellat non quia! Sed nemo aperiam tenetur provident impedit modi ullam quae.",
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt eaque, reiciendis, dolor atque, expedita voluptatibus ipsa impedit a repellat non quia! Sed nemo aperiam tenetur provident impedit modi ullam quae.',
   },
   {
     icon: <RxPencil2 />,
-    title: "Design",
+    title: 'Design',
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt eaque, reiciendis, dolor atque, expedita voluptatibus ipsa impedit a repellat non quia! Sed nemo aperiam tenetur provident impedit modi ullam quae.",
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt eaque, reiciendis, dolor atque, expedita voluptatibus ipsa impedit a repellat non quia! Sed nemo aperiam tenetur provident impedit modi ullam quae.',
   },
   {
     icon: <RxDesktop />,
-    title: "Development",
+    title: 'Development',
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt eaque, reiciendis, dolor atque, expedita voluptatibus ipsa impedit a repellat non quia! Sed nemo aperiam tenetur provident impedit modi ullam quae.",
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt eaque, reiciendis, dolor atque, expedita voluptatibus ipsa impedit a repellat non quia! Sed nemo aperiam tenetur provident impedit modi ullam quae.',
   },
   {
     icon: <RxReader />,
-    title: "Copywriting",
+    title: 'Copywriting',
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt eaque, reiciendis, dolor atque, expedita voluptatibus ipsa impedit a repellat non quia! Sed nemo aperiam tenetur provident impedit modi ullam quae.",
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt eaque, reiciendis, dolor atque, expedita voluptatibus ipsa impedit a repellat non quia! Sed nemo aperiam tenetur provident impedit modi ullam quae.',
   },
   {
     icon: <RxRocket />,
-    title: "SEO",
+    title: 'SEO',
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt eaque, reiciendis, dolor atque, expedita voluptatibus ipsa impedit a repellat non quia! Sed nemo aperiam tenetur provident impedit modi ullam quae.",
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt eaque, reiciendis, dolor atque, expedita voluptatibus ipsa impedit a repellat non quia! Sed nemo aperiam tenetur provident impedit modi ullam quae.',
   },
 ];
 
 export default function Page() {
   return (
     <div
-      className="h-full dark:bg-primaryDark/30 py-36 flex items-center
-        dark:text-white">
+      className='h-full dark:bg-primaryDark/30 py-36 flex items-center
+        dark:text-white'>
       <Circles />
-      <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row gap-x-8">
+      <div className='container mx-auto'>
+        <div className='flex flex-col xl:flex-row gap-x-8'>
           <section
-            className="text-center flex xl:w-[30vw] flex-col
-                    lg:text-left mb-4 xl:mb-0">
-            <h2 className="h2 xl:mt-8 fadeInUp">
-              My{" "}
-              <span className="text-indigo-500 dark:text-accent">
+            className='text-center flex xl:w-[30vw] flex-col
+                    lg:text-left mb-4 xl:mb-0'>
+            <h2 className='h2 xl:mt-8 fadeInUp'>
+              My{' '}
+              <span className='text-indigo-500 dark:text-accent'>
                 Services
               </span>
               .
             </h2>
-            <p className="fadeInUp mb-4 max-2-[400px] mx-auto lg:mx-0 text-black dark:text-white">
+            <p className='fadeInUp mb-4 max-2-[400px] mx-auto lg:mx-0 text-black dark:text-white'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Iusto nulla eum sapiente voluptate architecto, ab
               recusandae eligendi laudantium odio quod. Dolorem, unde
@@ -75,7 +75,7 @@ export default function Page() {
               dicta perferendis.
             </p>
           </section>
-          <div className="w-full xl:w-[60%] fadeInDown">
+          <div className='w-full xl:w-[60%] fadeInDown'>
             <ServiceSlider servicesData={servicesData} />
           </div>
         </div>

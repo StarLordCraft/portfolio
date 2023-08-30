@@ -1,18 +1,18 @@
-import "@/styles/globals.css";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import '@/styles/globals.css';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 
-import TopLeftImage from "@/components/TopLeftImage";
-import NavBar from "@/components/NavBard";
-import Header from "@/components/Header";
-import Transition from "@/components/Transition";
-import Footer from "@/components/Footer";
+import TopLeftImage from '@/components/TopLeftImage';
+import NavBar from '@/components/NavBard';
+import Header from '@/components/Header';
+import Transition from '@/components/Transition';
+import Footer from '@/components/Footer';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Rafael Alves",
-  description: "Conheça seu futuro programador FullStack",
+  title: 'Rafael Alves',
+  description: 'Conheça seu futuro programador FullStack',
 };
 
 export default function RootLayout({
@@ -21,12 +21,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-br">
+    <html lang='pt-br'>
       <head>
-        <link rel="icon" href="/favicon.ico" />
         <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200&display=swap"
+          rel='icon'
+          href='/favicon.ico'
+        />
+        <link
+          rel='stylesheet'
+          href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200&display=swap'
         />
       </head>
       <body
