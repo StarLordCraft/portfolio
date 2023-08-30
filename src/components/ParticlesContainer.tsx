@@ -1,35 +1,35 @@
-"use client";
+'use client';
 
-import { Particles } from "react-tsparticles";
-import type { Container, Engine } from "tsparticles-engine";
-import { loadFull } from "tsparticles";
+import { Particles } from 'react-tsparticles';
+import type { Container, Engine } from 'tsparticles-engine';
+import { loadFull } from 'tsparticles';
 
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from 'react';
 
 export default function ParticlesContainer() {
-  const [linkColor, setLinkColor] = useState<string>("#e5d393");
+  const [linkColor, setLinkColor] = useState<string>('#e5d393');
   const [particleColor, setParticleColor] =
-    useState<string>("#e68e2e");
+    useState<string>('#e68e2e');
 
   useEffect(function detectColorTheme() {
     let themePrefference: string;
-    if (typeof localStorage.getItem("dark") == "string") {
+    if (typeof localStorage.getItem('dark') == 'string') {
       themePrefference =
-        localStorage.getItem("dark") == "true" ? "dark" : "light";
+        localStorage.getItem('dark') == 'true' ? 'dark' : 'light';
     } else {
       if (
         window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
+        window.matchMedia('(prefers-color-scheme: dark)').matches
       ) {
-        themePrefference = "dark";
+        themePrefference = 'dark';
       } else {
-        themePrefference = "light";
+        themePrefference = 'light';
       }
     }
 
-    setLinkColor(themePrefference === "dark" ? "#e5d393" : "#000");
+    setLinkColor(themePrefference === 'dark' ? '#e5d393' : '#000');
     setParticleColor(
-      themePrefference === "dark" ? "#e68e2e" : "#000"
+      themePrefference === 'dark' ? '#e68e2e' : '#000'
     );
   }, []);
 
@@ -52,7 +52,7 @@ export default function ParticlesContainer() {
         fullScreen: { enable: false },
         background: {
           color: {
-            value: "",
+            value: '',
           },
         },
         fpsLimit: 120,
@@ -60,11 +60,11 @@ export default function ParticlesContainer() {
           events: {
             onClick: {
               enable: false,
-              mode: "push",
+              mode: 'push',
             },
             onHover: {
               enable: true,
-              mode: "repulse",
+              mode: 'repulse',
             },
             resize: true,
           },
@@ -91,10 +91,10 @@ export default function ParticlesContainer() {
           },
           collisions: { enable: true },
           move: {
-            direction: "none",
+            direction: 'none',
             enable: true,
             outModes: {
-              default: "bounce",
+              default: 'bounce',
             },
             random: false,
             speed: 1,
@@ -111,7 +111,7 @@ export default function ParticlesContainer() {
             value: 0.5,
           },
           shape: {
-            type: "circle",
+            type: 'circle',
           },
           size: {
             value: { min: 1, max: 5 },

@@ -1,7 +1,7 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import { RiWhatsappLine, RiMailLine } from "react-icons/ri";
-import { ImLinkedin2, ImGithub } from "react-icons/im";
+import { RiWhatsappLine, RiMailLine } from 'react-icons/ri';
+import { ImLinkedin2, ImGithub } from 'react-icons/im';
 
 export default function Socials() {
   return (

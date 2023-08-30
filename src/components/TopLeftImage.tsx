@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 export default function TopLeftImage() {
   return (
     <section className="absolute left-0 top-0">

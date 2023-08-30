@@ -4,11 +4,11 @@ import {
   RxPencil2,
   RxReader,
   RxRocket,
-} from "react-icons/rx";
+} from 'react-icons/rx';
 
-import WorkSlider from "@/components/work/WorkSlider";
-import Bulb from "@/components/Bulb";
-import Circles from "@/components/Circles";
+import WorkSlider from '@/components/work/WorkSlider';
+import Bulb from '@/components/Bulb';
+import Circles from '@/components/Circles';
 
 export interface Slide {
   readonly title: string;
@@ -24,40 +24,40 @@ const workData: WorkData = {
     {
       images: [
         {
-          title: "title1",
-          path: "/thumb1.jpg",
+          title: 'title1',
+          path: '/thumb1.jpg',
         },
         {
-          title: "title2",
-          path: "/thumb2.jpg",
+          title: 'title2',
+          path: '/thumb2.jpg',
         },
         {
-          title: "title3",
-          path: "/thumb3.jpg",
+          title: 'title3',
+          path: '/thumb3.jpg',
         },
         {
-          title: "title4",
-          path: "/thumb4.jpg",
+          title: 'title4',
+          path: '/thumb4.jpg',
         },
       ],
     },
     {
       images: [
         {
-          title: "title5",
-          path: "/thumb5.jpg",
+          title: 'title5',
+          path: '/thumb5.jpg',
         },
         {
-          title: "title6",
-          path: "/thumb6.jpg",
+          title: 'title6',
+          path: '/thumb6.jpg',
         },
         {
-          title: "title7",
-          path: "/thumb7.jpg",
+          title: 'title7',
+          path: '/thumb7.jpg',
         },
         {
-          title: "title8",
-          path: "/thumb8.jpg",
+          title: 'title8',
+          path: '/thumb8.jpg',
         },
       ],
     },
@@ -76,7 +76,7 @@ export default function Page() {
             className="text-center flex xl:w-[30vw] flex-col
                     lg:text-left mb-4 xl:mb-0">
             <h2 className="h2 xl:mt-8 fadeInUp">
-              My{" "}
+              My{' '}
               <span className="text-indigo-500 dark:text-accent">
                 Work
               </span>

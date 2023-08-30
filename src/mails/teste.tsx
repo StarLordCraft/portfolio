@@ -10,8 +10,8 @@ import {
   Row,
   Section,
   Text,
-} from "@react-email/components";
-import * as React from "react";
+} from '@react-email/components';
+import * as React from 'react';
 
 interface TwitchResetPasswordEmailProps {
   username?: string;
@@ -20,15 +20,15 @@ interface TwitchResetPasswordEmailProps {
 
 const baseUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
-  : "";
+  : '';
 
 function TwitchResetPasswordEmail({
-  username = "Rafael",
-  updatedDate = new Date("June 23, 2022 4:06:00 pm UTC"),
+  username = 'Rafael',
+  updatedDate = new Date('June 23, 2022 4:06:00 pm UTC'),
 }: TwitchResetPasswordEmailProps) {
-  const formattedDate = new Intl.DateTimeFormat("en", {
-    dateStyle: "medium",
-    timeStyle: "medium",
+  const formattedDate = new Intl.DateTimeFormat('en', {
+    dateStyle: 'medium',
+    timeStyle: 'medium',
   }).format(updatedDate);
 
   return (
@@ -55,7 +55,7 @@ function TwitchResetPasswordEmail({
           <Section style={content}>
             <Text style={paragraph}>Hi {username},</Text>
             <Text style={paragraph}>
-              You updated the password for your Twitch account on{" "}
+              You updated the password for your Twitch account on{' '}
               {formattedDate}. If this was you, then no further action
               is required.
             </Text>
@@ -63,9 +63,9 @@ function TwitchResetPasswordEmail({
               However if you did NOT perform this password change,
               please
               <Link href="#" style={link}>
-                {" "}
+                {' '}
                 reset your account password
-              </Link>{" "}
+              </Link>{' '}
               immediately.
             </Text>
             <Text style={paragraph}>
@@ -73,14 +73,14 @@ function TwitchResetPasswordEmail({
               unique to your Twitch account. To learn more about how
               to create a strong and unique password,
               <Link href="#" style={link}>
-                {" "}
+                {' '}
                 click here.
               </Link>
             </Text>
             <Text style={paragraph}>
               Still have questions? Please contact
               <Link href="#" style={link}>
-                {" "}
+                {' '}
                 Twitch Support
               </Link>
             </Text>
@@ -96,20 +96,20 @@ function TwitchResetPasswordEmail({
           <Row>
             <Column
               align="right"
-              style={{ width: "50%", paddingRight: "8px" }}>
+              style={{ width: '50%', paddingRight: '8px' }}>
               <Img
                 src={`${baseUrl}/static/twitch-icon-twitter.png`}
               />
             </Column>
             <Column
               align="left"
-              style={{ width: "50%", paddingLeft: "8px" }}>
+              style={{ width: '50%', paddingLeft: '8px' }}>
               <Img
                 src={`${baseUrl}/static/twitch-icon-facebook.png`}
               />
             </Column>
           </Row>
-          <Text style={{ textAlign: "center", color: "#706a7b" }}>
+          <Text style={{ textAlign: 'center', color: '#706a7b' }}>
             © 2022 Twitch, All Rights Reserved <br />
             350 Bush Street, 2nd Floor, San Francisco, CA, 94104 - USA
           </Text>
@@ -121,10 +121,10 @@ function TwitchResetPasswordEmail({
 
 export default TwitchResetPasswordEmail;
 
-const fontFamily = "HelveticaNeue,Helvetica,Arial,sans-serif";
+const fontFamily = 'HelveticaNeue,Helvetica,Arial,sans-serif';
 
 const main = {
-  backgroundColor: "#efeef1",
+  backgroundColor: '#efeef1',
   fontFamily,
 };
 
@@ -134,42 +134,42 @@ const paragraph = {
 };
 
 const container = {
-  width: "580px",
-  margin: "30px auto",
-  backgroundColor: "#ffffff",
+  width: '580px',
+  margin: '30px auto',
+  backgroundColor: '#ffffff',
 };
 
 const footer = {
-  width: "580px",
-  margin: "0 auto",
+  width: '580px',
+  margin: '0 auto',
 };
 
 const content = {
-  padding: "5px 50px 10px 60px",
+  padding: '5px 50px 10px 60px',
 };
 
 const logo = {
-  display: "flex",
-  justifyContent: "center",
-  alingItems: "center",
+  display: 'flex',
+  justifyContent: 'center',
+  alingItems: 'center',
   padding: 30,
 };
 
 const sectionsBorders = {
-  width: "100%",
-  display: "flex",
+  width: '100%',
+  display: 'flex',
 };
 
 const sectionBorder = {
-  borderBottom: "1px solid rgb(238,238,238)",
-  width: "249px",
+  borderBottom: '1px solid rgb(238,238,238)',
+  width: '249px',
 };
 
 const sectionCenter = {
-  borderBottom: "1px solid rgb(145,71,255)",
-  width: "102px",
+  borderBottom: '1px solid rgb(145,71,255)',
+  width: '102px',
 };
 
 const link = {
-  textDecoration: "underline",
+  textDecoration: 'underline',
 };

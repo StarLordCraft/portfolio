@@ -1,8 +1,8 @@
-import Config from "@/config/mail";
+import Config from '@/config/mail';
 
-import { render } from "@react-email/render";
-import { ReactElement } from "react";
-import * as nodemailer from "nodemailer";
+import { render } from '@react-email/render';
+import { ReactElement } from 'react';
+import * as nodemailer from 'nodemailer';
 
 interface MailAttachment {
   filename: string;
@@ -45,10 +45,10 @@ export default class Mail {
 
     try {
       const info = await transporter.sendMail(mailOptions);
-      return "E-mail enviado com sucesso!";
+      return 'E-mail enviado com sucesso!';
     } catch (error) {
       console.error(error);
-      throw new Error("Erro ao enviar o e-mail.");
+      throw new Error('Erro ao enviar o e-mail.');
     }
   }
 }
