@@ -1,20 +1,26 @@
-"use client"
 
-import { useState } from 'react';
+import BgModal from './BgModal';
 
-import BgModal from "./BgModal";
+export default function WorkModal({
+  modalOpen,
+  setModalOpen,
+}: {
+  modalOpen: boolean;
+  setModalOpen: (isOpen: boolean) => void;
+}) {
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
-export default function WorkModal()
-{
-    const [modalOpen, setModalOpen] = useState(true);
-    
-    const closeModal = () => {
-        setModalOpen(false);
-    };
+  return (
+    <>
+      {modalOpen && (
+        <BgModal
+          isOpen={modalOpen}
+          setIsOpen={setModalOpen}>
 
-    return (
-        <BgModal isOpen={modalOpen} setIsOpen={setModalOpen}>
-            Teste
-        </BgModal>
-    );
+          </BgModal>
+      )}
+    </>
+  );
 }

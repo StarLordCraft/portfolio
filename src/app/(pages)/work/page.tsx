@@ -1,4 +1,3 @@
-import WorkModal from "@/components/modals/WorkModal";
 import WorkSlider from "@/components/work/WorkSlider";
 import Bulb from "@/components/Bulb";
 import Circles from "@/components/Circles";
@@ -90,7 +89,6 @@ export default function Page() {
         </div>
       </div>
       <Bulb />
-      <WorkModal />
     </div>
   );
 }
