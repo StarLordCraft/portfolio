@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function Circles() {
   return (
@@ -8,7 +8,7 @@ export default function Circles() {
          animate-pulse duration-76
          z-10">
       <Image
-        src={'/circles.png'}
+        src={"/circles.png"}
         alt=""
         width={200}
         height={200}
@@ -16,7 +16,7 @@ export default function Circles() {
       />
 
       <Image
-        src={'/lightCircles.png'}
+        src={"/lightCircles.png"}
         alt=""
         width={200}
         height={200}

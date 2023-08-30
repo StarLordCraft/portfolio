@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
-import { HiArrowRight } from 'react-icons/hi2';
+import { HiArrowRight } from "react-icons/hi2";
 export default function ProjectsBtn() {
   return (
     <div className="mx-auto xl:mx-0 bg-indigo-800 dark:bg-transparent rounded-full w-[210px] h-[210px] flex items-center justify-center">

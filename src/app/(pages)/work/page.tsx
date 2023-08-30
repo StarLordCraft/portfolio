@@ -1,6 +1,6 @@
-import WorkSlider from '@/components/work/WorkSlider';
-import Bulb from '@/components/Bulb';
-import Circles from '@/components/Circles';
+import WorkSlider from "@/components/work/WorkSlider";
+import Bulb from "@/components/Bulb";
+import Circles from "@/components/Circles";
 
 export interface Slide {
   readonly title: string;
@@ -16,40 +16,40 @@ const workData: WorkData = {
     {
       images: [
         {
-          title: 'title1',
-          path: '/bg-explosion.png',
+          title: "title1",
+          path: "/bg-explosion.png",
         },
         {
-          title: 'title2',
-          path: '/bg-explosion.png',
+          title: "title2",
+          path: "/bg-explosion.png",
         },
         {
-          title: 'title3',
-          path: '/bg-explosion.png',
+          title: "title3",
+          path: "/bg-explosion.png",
         },
         {
-          title: 'title4',
-          path: '/bg-explosion.png',
+          title: "title4",
+          path: "/bg-explosion.png",
         },
       ],
     },
     {
       images: [
         {
-          title: 'title5',
-          path: '/bg-explosion.png',
+          title: "title5",
+          path: "/bg-explosion.png",
         },
         {
-          title: 'title6',
-          path: '/bg-explosion.png',
+          title: "title6",
+          path: "/bg-explosion.png",
         },
         {
-          title: 'title7',
-          path: '/bg-explosion.png',
+          title: "title7",
+          path: "/bg-explosion.png",
         },
         {
-          title: 'title8',
-          path: '/bg-explosion.png',
+          title: "title8",
+          path: "/bg-explosion.png",
         },
       ],
     },
@@ -68,7 +68,7 @@ export default function Page() {
             className="text-center flex xl:w-[30vw] flex-col
                     lg:text-left mb-4 xl:mb-0">
             <h2 className="h2 xl:mt-12 fadeInUp">
-              My{' '}
+              My{" "}
               <span className="text-indigo-500 dark:text-accent">
                 Work
               </span>

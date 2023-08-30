@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 
-import ToggleTheme from './ToggleTheme';
-import Socials from './Socials';
+import ToggleTheme from "./ToggleTheme";
+import Socials from "./Socials";
 
 export default function Header() {
   return (
@@ -14,9 +14,9 @@ export default function Header() {
           className="flex flex-col justify-between
              items-center gap-y-4">
           <div className="flex justify-between items-center w-full">
-            <Link href={'/'}>
+            <Link href={"/"}>
               <Image
-                src={'/logo.png'}
+                src={"/logo.png"}
                 width={40}
                 height={40}
                 alt=""

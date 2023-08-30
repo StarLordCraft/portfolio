@@ -1,8 +1,8 @@
-'use client';
-import { useState } from 'react';
-import Link from 'next/link';
+"use client";
+import { useState } from "react";
+import Link from "next/link";
 
-import { AboutDataItem, InfoItem } from '@/app/(pages)/about/page';
+import { AboutDataItem, InfoItem } from "@/app/(pages)/about/page";
 
 export default function AboutHero({
   aboutData,
@@ -21,7 +21,7 @@ export default function AboutHero({
               key={itemIndex}
               className={`${
                 index === itemIndex &&
-                'text-indigo-800 dark:text-accent after:w-full after:bg-indigo-800 dark:after:bg-accent'
+                "text-indigo-800 dark:text-accent after:w-full after:bg-indigo-800 dark:after:bg-accent"
               } 
                     cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-black after:dark:bg-white
                     after:absolute after:left-0 after:-bottom-1 after:transition-all after:duration-300`}

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   HiHome,
@@ -7,11 +7,11 @@ import {
   HiRectangleGroup,
   HiChatBubbleBottomCenterText,
   HiEnvelope,
-} from 'react-icons/hi2';
+} from "react-icons/hi2";
 
-import Link from 'next/link';
+import Link from "next/link";
 
-import { usePathname } from 'next/navigation';
+import { usePathname } from "next/navigation";
 
 interface NavData {
   readonly name: string;
@@ -20,18 +20,18 @@ interface NavData {
 }
 
 const navData: NavData[] = [
-  { name: 'home', path: '/', icon: <HiHome /> },
-  { name: 'about', path: '/about', icon: <HiUser /> },
-  { name: 'services', path: '/services', icon: <HiRectangleGroup /> },
-  { name: 'work', path: '/work', icon: <HiViewColumns /> },
+  { name: "home", path: "/", icon: <HiHome /> },
+  { name: "about", path: "/about", icon: <HiUser /> },
+  { name: "services", path: "/services", icon: <HiRectangleGroup /> },
+  { name: "work", path: "/work", icon: <HiViewColumns /> },
   {
-    name: 'testimonials',
-    path: '/testimonials',
+    name: "testimonials",
+    path: "/testimonials",
     icon: <HiChatBubbleBottomCenterText />,
   },
   {
-    name: 'contact',
-    path: '/contact',
+    name: "contact",
+    path: "/contact",
     icon: <HiEnvelope />,
   },
 ];
@@ -54,7 +54,7 @@ export default function NavBar() {
               key={index}
               className={`${
                 link.path == pathName &&
-                'text-indigo-500 dark:text-accent'
+                "text-indigo-500 dark:text-accent"
               }
                 relative flex items-center group hover:text-indigo-500 hover:dark:text-accent
                 transition-all duration-300`}>

@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import { FreeMode, Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { FreeMode, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import { RxArrowTopRight } from 'react-icons/rx';
+import { RxArrowTopRight } from "react-icons/rx";
 
-import { ServicesData } from '@/app/(pages)/services/page';
+import { ServicesData } from "@/app/(pages)/services/page";
 
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
 
 export default function ServiceSlider({
   servicesData,

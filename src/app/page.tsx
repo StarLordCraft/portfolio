@@ -1,6 +1,6 @@
-import ProjectsBtn from '@/components/ProjectsBtn';
-import Avatar from '@/components/Avatar';
-import ParticlesContainer from '@/components/ParticlesContainer';
+import ProjectsBtn from "@/components/ProjectsBtn";
+import Avatar from "@/components/Avatar";
+import ParticlesContainer from "@/components/ParticlesContainer";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
           <h1 className="h1 dark:text-white fadeInDown">
             Transforming Ideas <br /> Into
             <span className="text-indigo-500 dark:text-accent">
-              {' '}
+              {" "}
               Digital Reality
             </span>
           </h1>

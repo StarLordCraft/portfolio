@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
+import Image from "next/image";
 
-import { Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import { BsArrowRight } from 'react-icons/bs';
+import { BsArrowRight } from "react-icons/bs";
 
-import { WorkData, Slide } from '@/app/(pages)/work/page';
+import { WorkData, Slide } from "@/app/(pages)/work/page";
 
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
 
 export default function WorkSlider({
   workData,
