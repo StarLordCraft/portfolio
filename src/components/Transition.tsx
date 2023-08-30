@@ -29,7 +29,7 @@ export function Container() {
         animate='animate'
         exit='exit'
         transition={{
-          delay: 0.2,
+          delay: 0,
           duration: 0.6,
           ease: 'easeInOut',
         }}></motion.div>
@@ -42,7 +42,7 @@ export function Container() {
         animate='animate'
         exit='exit'
         transition={{
-          delay: 0.4,
+          delay: 0.2,
           duration: 0.6,
           ease: 'easeInOut',
         }}></motion.div>
@@ -55,7 +55,7 @@ export function Container() {
         animate='animate'
         exit='exit'
         transition={{
-          delay: 0.6,
+          delay: 0.4,
           duration: 0.6,
           ease: 'easeInOut',
         }}></motion.div>

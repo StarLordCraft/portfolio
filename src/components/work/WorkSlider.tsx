@@ -36,7 +36,7 @@ export default function WorkSlider({
                 return (
                   <section
                     className='relative rounded-lg
-                     flex items-center justify-center group'
+                     flex items-center justify-center group text-white'
                     key={index}>
                     <div
                       className='flex items-center justify-center
