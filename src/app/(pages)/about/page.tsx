@@ -158,7 +158,7 @@ export default function Page() {
             className='max-w-[500px] mx-auto xl:mx-9 mb-6 xl:mb-12 px-2 xl:px-0 
             text-black/60 dark:text-white/60 fadeInRight'>
             I began freelancing as a developer since 2023. Since then,
-            I"ve done remote work for agencies and collabored on
+            I ve done remote work for agencies and collabored on
             digital products for business and consumer use.
           </p>
 
