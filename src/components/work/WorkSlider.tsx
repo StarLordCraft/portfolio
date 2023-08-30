@@ -25,7 +25,7 @@ export default function WorkSlider({
         clickable: true,
       }}
       modules={[Pagination]}
-      className="h-[280px] sm:h-[480px]">
+      className="h-fit">
       {workData.slides.map((slide, index: number) => {
         return (
           <SwiperSlide key={index}>
@@ -35,7 +35,7 @@ export default function WorkSlider({
               {slide.images.map((image, index: number) => {
                 return (
                   <section
-                    className="relative rounded-lg overflow-hidden
+                    className="relative rounded-lg
                      flex items-center justify-center group"
                     key={index}>
                     <div

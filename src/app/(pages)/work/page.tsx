@@ -25,19 +25,19 @@ const workData: WorkData = {
       images: [
         {
           title: 'title1',
-          path: '/thumb1.jpg',
+          path: '/bg-explosion.png',
         },
         {
           title: 'title2',
-          path: '/thumb2.jpg',
+          path: '/bg-explosion.png',
         },
         {
           title: 'title3',
-          path: '/thumb3.jpg',
+          path: '/bg-explosion.png',
         },
         {
           title: 'title4',
-          path: '/thumb4.jpg',
+          path: '/bg-explosion.png',
         },
       ],
     },
@@ -45,19 +45,19 @@ const workData: WorkData = {
       images: [
         {
           title: 'title5',
-          path: '/thumb5.jpg',
+          path: '/bg-explosion.png',
         },
         {
           title: 'title6',
-          path: '/thumb6.jpg',
+          path: '/bg-explosion.png',
         },
         {
           title: 'title7',
-          path: '/thumb7.jpg',
+          path: '/bg-explosion.png',
         },
         {
           title: 'title8',
-          path: '/thumb8.jpg',
+          path: '/bg-explosion.png',
         },
       ],
     },
@@ -67,7 +67,7 @@ const workData: WorkData = {
 export default function Page() {
   return (
     <div
-      className="h-full dark:bg-primaryDark/30 py-36 flex items-center
+      className="h-full dark:bg-primaryDark/30 py-32 flex items-center
         dark:text-white">
       <Circles />
       <div className="container mx-auto">
