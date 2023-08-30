@@ -75,7 +75,7 @@ export default function Page() {
           <section
             className="text-center flex xl:w-[30vw] flex-col
                     lg:text-left mb-4 xl:mb-0">
-            <h2 className="h2 xl:mt-8 fadeInUp">
+            <h2 className="h2 xl:mt-12 fadeInUp">
               My{' '}
               <span className="text-indigo-500 dark:text-accent">
                 Work
