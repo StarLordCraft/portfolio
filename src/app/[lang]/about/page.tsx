@@ -134,7 +134,13 @@ const aboutData: AboutDataItem[] = [
   },
 ];
 
-export default function Page() {
+export default function Page({
+  params,
+}: {
+  params: { lang: string };
+}) {
+  console.log(params);
+  
   return (
     <section className='h-full dark:bg-primaryDark/30 py-32 text-center dark:text-white xl:text-left'>
       <Circles />
