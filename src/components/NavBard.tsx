@@ -19,23 +19,35 @@ interface NavData {
   readonly icon: React.JSX.Element;
 }
 
-const navData: NavData[] = [
-  { name: 'home', path: '/', icon: <HiHome /> },
-  { name: 'about', path: '/about', icon: <HiUser /> },
-  { name: 'services', path: '/services', icon: <HiRectangleGroup /> },
-  { name: 'work', path: '/work', icon: <HiViewColumns /> },
-  {
-    name: 'testimonials',
-    path: '/testimonials',
-    icon: <HiChatBubbleBottomCenterText />,
-  },
-  {
-    name: 'contact',
-    path: '/contact',
-    icon: <HiEnvelope />,
-  },
-];
-export default function NavBar() {
+export default function NavBar({ lang }: { lang: string }) {
+  const navData: NavData[] = [
+    { name: `home`, path: '/', icon: <HiHome /> },
+    {
+      name: `${lang == 'en' ? 'about' : 'sobre'}`,
+      path: '/about',
+      icon: <HiUser />,
+    },
+    {
+      name: `${lang == 'en' ? 'services' : 'serviços'}`,
+      path: '/services',
+      icon: <HiRectangleGroup />,
+    },
+    {
+      name: `${lang == 'en' ? 'work' : 'trabalho'}`,
+      path: '/work',
+      icon: <HiViewColumns />,
+    },
+    {
+      name: 'testimonials',
+      path: '/testimonials',
+      icon: <HiChatBubbleBottomCenterText />,
+    },
+    {
+      name: 'contact',
+      path: '/contact',
+      icon: <HiEnvelope />,
+    },
+  ];
   const pathName = usePathname();
 
   return (

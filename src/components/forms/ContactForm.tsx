@@ -42,7 +42,7 @@ export default function ContactForm() {
         overflow-hidden hover:bg-indigo-500 dark:hover:bg-accent group
         border border-black/30 dark:border-white/30
         placeholder:text-black/30 dark:placeholder:text-white/30
-        focus:ring-indigo-500 dark:focus:ring-accent'>
+        focus:ring-indigo-500 dark:focus:ring-accent hover:text-white'>
         <span
           className='group-hover:-translate-y-[120%] group-hover:opacity-0
         transition-all duration-500'>

@@ -2,11 +2,12 @@ import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
+import { defaultLocale } from './middlewares/lang/middleware';
+
 import TopLeftImage from '@/components/TopLeftImage';
 import NavBar from '@/components/NavBard';
 import Header from '@/components/Header';
 import Transition from '@/components/Transition';
-import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,11 +18,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: { lang: string };
 }) {
   return (
-    <html lang='pt-br'>
+    <html lang={params.lang ?? defaultLocale}>
       <head>
         <link
           rel='icon'
@@ -35,7 +38,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} transition-all duration-300 bg-backgroundLight dark:bg-backgroundDark bg-no-repeat bg-cover w-screen h-screen`}>
         <TopLeftImage />
-        <NavBar />
+        <NavBar lang={params.lang} />
         <Header />
         <Transition>{children}</Transition>
       </body>
