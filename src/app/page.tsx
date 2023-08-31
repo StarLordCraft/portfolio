@@ -2,9 +2,9 @@ import ProjectsBtn from '@/components/ProjectsBtn';
 import Avatar from '@/components/Avatar';
 import ParticlesContainer from '@/components/ParticlesContainer';
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className='bg-primaryLight/10 h-full'>
+    <div className='bg-primaryDark/10 h-full'>
       <main
         className='w-full h-full
       dark:bg-gradient-to-r dark:from-primaryDark/10 dark:via-black/30 dark:to-black/10'>

@@ -1,3 +1,5 @@
+import Bulb from '@/components/Bulb';
+import Circles from '@/components/Circles';
 import TestimonialSlider from '@/components/testimonials/TestimonialSlider';
 
 const testimonialData: string[] = [
@@ -25,6 +27,8 @@ export default function Page() {
           <TestimonialSlider testimonialData={testimonialData} />
         </div>
       </section>
+      <Circles />
+      <Bulb />
     </main>
   );
 }
