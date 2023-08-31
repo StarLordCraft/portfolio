@@ -9,7 +9,7 @@ import {
   HiEnvelope,
 } from 'react-icons/hi2';
 
-import Link from 'next/link';
+import { defaultLocale } from '@/middlewares/lang/middleware';
 
 import { usePathname } from 'next/navigation';
 
@@ -19,32 +19,33 @@ interface NavData {
   readonly icon: React.JSX.Element;
 }
 
-export default function NavBar({ lang }: { lang: string }) {  
+export default function NavBar({ lang }: { lang: string }) {
+  lang = lang ? lang : defaultLocale;
   const navData: NavData[] = [
-    { name: `home`, path: '/', icon: <HiHome /> },
+    { name: `home`, path: `/${lang}`, icon: <HiHome /> },
     {
       name: `${lang == 'en' ? 'about' : 'sobre'}`,
-      path: '/about',
+      path: `/${lang}/about`,
       icon: <HiUser />,
     },
     {
       name: `${lang == 'en' ? 'services' : 'serviços'}`,
-      path: '/services',
+      path: `/${lang}/services`,
       icon: <HiRectangleGroup />,
     },
     {
       name: `${lang == 'en' ? 'work' : 'trabalho'}`,
-      path: '/work',
+      path: `/${lang}/work`,
       icon: <HiViewColumns />,
     },
     {
       name: `${lang == 'en' ? 'testimonials' : 'depoimentos'}`,
-      path: '/testimonials',
+      path: `/${lang}/testimonials`,
       icon: <HiChatBubbleBottomCenterText />,
     },
     {
       name: `${lang == 'en' ? 'contact' : 'contato'}`,
-      path: '/contact',
+      path: `/${lang}/contact`,
       icon: <HiEnvelope />,
     },
   ];

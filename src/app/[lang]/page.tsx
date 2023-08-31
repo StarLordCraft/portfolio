@@ -2,7 +2,11 @@ import ProjectsBtn from '@/components/ProjectsBtn';
 import Avatar from '@/components/Avatar';
 import ParticlesContainer from '@/components/ParticlesContainer';
 
-export default function Page() {
+export default function Page({
+  params,
+}: {
+  params: { lang: string };
+}) {
   return (
     <div className='bg-primaryDark/10 h-full'>
       <main
