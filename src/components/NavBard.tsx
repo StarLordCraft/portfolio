@@ -49,7 +49,7 @@ export default function NavBar() {
       xl:h-max py-8 backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full dark:text-white'>
         {navData.map((link, index) => {
           return (
-            <Link
+            <a
               href={link.path}
               key={index}
               className={`${
@@ -74,7 +74,7 @@ export default function NavBar() {
               </div>
 
               <div>{link.icon}</div>
-            </Link>
+            </a>
           );
         })}
       </div>

@@ -2,7 +2,6 @@ import { Url } from 'next/dist/shared/lib/router/router';
 
 import Avatar from '@/components/Avatar';
 import Circles from '@/components/Circles';
-import Bulb from '@/components/Bulb';
 import Counter from '@/components/about/Counter';
 import AboutHero from '@/components/about/AboutHero';
 
@@ -139,7 +138,6 @@ export default function Page() {
   return (
     <section className='h-full dark:bg-primaryDark/30 py-32 text-center dark:text-white xl:text-left'>
       <Circles />
-      <Bulb />
       <div
         className='hidden xl:flex absolute bottom-0 -left-[235px]
           fadeInRight'>
