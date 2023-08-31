@@ -39,7 +39,7 @@ export default function ContactForm() {
       <button
         className='btn rounded-full max-w-[170px]
         px-8 transition-all duration-300 flex items-center justify-center
-        overflow-hidden hover:border-indigo-500 dark:hover:bg-accent group
+        overflow-hidden hover:bg-indigo-500 dark:hover:bg-accent group
         border border-black/30 dark:border-white/30
         placeholder:text-black/30 dark:placeholder:text-white/30
         focus:ring-indigo-500 dark:focus:ring-accent'>
