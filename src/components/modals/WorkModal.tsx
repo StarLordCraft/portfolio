@@ -7,15 +7,17 @@ export default function WorkModal({
   setProjectDetails,
 }: {
   project: Project | null;
-  setProjectDetails: (isOpen: null) => void;
+  setProjectDetails: (project: Project | null) => void;
 }) {
   const closeModal = () => {
     setProjectDetails(null);
   };
 
   return (
-  <BgModal project={project}>
+    <BgModal
+      project={project}
+      setProjectDetails={setProjectDetails}>
 
-  </BgModal>
+    </BgModal>
   );
 }
