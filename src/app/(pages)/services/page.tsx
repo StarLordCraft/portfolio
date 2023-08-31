@@ -51,7 +51,7 @@ const servicesData: ServicesData[] = [
 
 export default function Page() {
   return (
-    <div
+    <main
       className='h-full dark:bg-primaryDark/30 py-36 flex items-center
         dark:text-white'>
       <Circles />
@@ -81,6 +81,6 @@ export default function Page() {
         </div>
       </div>
       <Bulb />
-    </div>
+    </main>
   );
 }

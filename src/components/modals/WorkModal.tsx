@@ -17,7 +17,6 @@ export default function WorkModal({
   const closeModal = () => {
     setProjectDetails(null);
   };
-  console.log(project);
 
   return (
     <BgModal
