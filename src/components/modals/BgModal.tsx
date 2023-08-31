@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-import type { Project } from '@/app/(pages)/work/page';
+import type { Project } from '@/app/[lang]/work/page';
 
 export default function BgModal({
   children,

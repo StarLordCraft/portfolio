@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { RxArrowTopRight } from 'react-icons/rx';
 
-import { ServicesData } from '@/app/(pages)/services/page';
+import { ServicesData } from '@/app/[lang]/services/page';
 
 import 'swiper/css';
 import 'swiper/css/free-mode';

@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { BsArrowRight } from 'react-icons/bs';
 
-import { WorkData, Project } from '@/app/(pages)/work/page';
+import { WorkData, Project } from '@/app/[lang]/work/page';
 
 import WorkModal from '../modals/WorkModal';
 

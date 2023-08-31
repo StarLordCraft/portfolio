@@ -5,7 +5,7 @@ import BgModal from './BgModal';
 
 import { AiOutlineClose } from 'react-icons/ai';
 
-import type { Project } from '@/app/(pages)/work/page';
+import type { Project } from '@/app/[lang]/work/page';
 
 export default function WorkModal({
   project,

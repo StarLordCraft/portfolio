@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-import { AboutDataItem, InfoItem } from '@/app/(pages)/about/page';
+import { AboutDataItem, InfoItem } from '@/app/[lang]/about/page';
 
 export default function AboutHero({
   aboutData,
