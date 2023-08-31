@@ -5,6 +5,8 @@ import Circles from "@/components/Circles";
 export interface Project {
   readonly title: string;
   readonly image: string;
+  readonly description: string;
+  readonly icons?: React.JSX.Element[];
 }
 
 export interface WorkData {
@@ -18,18 +20,22 @@ const workData: WorkData = {
         {
           title: "title1",
           image: "/bg-explosion.png",
+          description: '',
         },
         {
           title: "title2",
           image: "/bg-explosion.png",
+          description: '',
         },
         {
           title: "title3",
           image: "/bg-explosion.png",
+          description: '',
         },
         {
           title: "title4",
           image: "/bg-explosion.png",
+          description: '',
         },
       ],
     },
@@ -38,18 +44,22 @@ const workData: WorkData = {
         {
           title: "title5",
           image: "/bg-explosion.png",
+          description: '',
         },
         {
           title: "title6",
           image: "/bg-explosion.png",
+          description: '',
         },
         {
           title: "title7",
           image: "/bg-explosion.png",
+          description: '',
         },
         {
           title: "title8",
           image: "/bg-explosion.png",
+          description: '',
         },
       ],
     },
