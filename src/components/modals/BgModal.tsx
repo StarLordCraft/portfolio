@@ -37,8 +37,8 @@ export default function BgModal({
     <div
       className={`min-h-screen w-[0] h-full fixed z-[100] top-0 left-0 flex justify-center items-center
     ${
-      modalData ? 'bg-black/50 dark:bg-white/50 min-w-full' : ''
-    } transition-all duration-300`}>
+      modalData ? 'bg-black/50 dark:bg-white/50 w-full' : ''
+    } transition-all duration-500`}>
       <div
         ref={modalRef}
         className='flex items-center justify-center'>

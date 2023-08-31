@@ -24,7 +24,7 @@ export default function WorkModal({
       modalData={project}
       setModalData={setProjectDetails}>
       {project && (
-        <div className='px-2 w-full'>
+        <div className='px-2 w-full fadeInLeft'>
           <section
             className={`w-full h-full bg-white dark:bg-black
            text-black dark:text-white rounded-lg shadow-lg shadow-slate-100
