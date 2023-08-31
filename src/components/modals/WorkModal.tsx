@@ -15,8 +15,8 @@ export default function WorkModal({
 
   return (
     <BgModal
-      project={project}
-      setProjectDetails={setProjectDetails}>
+      modalData={project}
+      setModalData={setProjectDetails}>
 
     </BgModal>
   );
