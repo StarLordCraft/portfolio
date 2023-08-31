@@ -19,7 +19,7 @@ interface NavData {
   readonly icon: React.JSX.Element;
 }
 
-export default function NavBar({ lang }: { lang: string }) {
+export default function NavBar({ lang }: { lang: string }) {  
   const navData: NavData[] = [
     { name: `home`, path: '/', icon: <HiHome /> },
     {

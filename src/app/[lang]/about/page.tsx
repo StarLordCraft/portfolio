@@ -2,8 +2,8 @@ import { Url } from 'next/dist/shared/lib/router/router';
 
 import Avatar from '@/components/Avatar';
 import Circles from '@/components/Circles';
-import Counter from '@/components/about/Counter';
-import AboutHero from '@/components/about/AboutHero';
+import Counter from '@/app/[lang]/about/_components/Counter';
+import AboutHero from '@/app/[lang]/about/_components/AboutHero';
 
 import {
   FaHtml5,

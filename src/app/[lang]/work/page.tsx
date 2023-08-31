@@ -1,7 +1,6 @@
-import WorkSlider from '@/components/work/WorkSlider';
+import WorkSlider from './_components/WorkSlider';
 import Bulb from '@/components/Bulb';
 import Circles from '@/components/Circles';
-
 
 import {
   FaHtml5,

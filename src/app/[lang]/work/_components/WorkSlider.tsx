@@ -11,7 +11,7 @@ import { BsArrowRight } from 'react-icons/bs';
 
 import { WorkData, Project } from '@/app/[lang]/work/page';
 
-import WorkModal from '../modals/WorkModal';
+import WorkModal from '@/components/modals/WorkModal';
 
 import 'swiper/css';
 import 'swiper/css/free-mode';

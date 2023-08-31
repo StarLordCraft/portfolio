@@ -24,13 +24,11 @@ function getLocale(request: Request): string {
 
 export function middleware(request: NextRequest) {
   const locale = getLocale(request) ?? defaultLocale;
+  console.log(locale);
+  
   const pathname = request.nextUrl.pathname;
 
   const newUrl = new URL(`/${locale}${pathname}`, request.nextUrl);
 
   return NextResponse.rewrite(newUrl);
 }
-
-export const config = {
-  matcher: ['/((?!_next|api|favicon.ico).*)'],
-};

@@ -6,7 +6,7 @@ import {
   RxRocket,
 } from 'react-icons/rx';
 
-import ServiceSlider from '@/components/services/ServiceSlider';
+import ServiceSlider from '@/app/[lang]/services/services/ServiceSlider';
 import Bulb from '@/components/Bulb';
 import Circles from '@/components/Circles';
 

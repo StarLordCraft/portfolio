@@ -2,7 +2,7 @@ import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
-import { defaultLocale } from './middlewares/lang/middleware';
+import { defaultLocale } from './middleware';
 
 import TopLeftImage from '@/components/TopLeftImage';
 import NavBar from '@/components/NavBard';
