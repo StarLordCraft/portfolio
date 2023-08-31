@@ -38,12 +38,12 @@ export default function NavBar({ lang }: { lang: string }) {
       icon: <HiViewColumns />,
     },
     {
-      name: 'testimonials',
+      name: `${lang == 'en' ? 'testimonials' : 'depoimentos'}`,
       path: '/testimonials',
       icon: <HiChatBubbleBottomCenterText />,
     },
     {
-      name: 'contact',
+      name: `${lang == 'en' ? 'contact' : 'contato'}`,
       path: '/contact',
       icon: <HiEnvelope />,
     },
