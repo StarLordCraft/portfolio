@@ -38,13 +38,13 @@ export default function ParticlesContainer() {
   }, []);
 
   const particlesLoaded = useCallback(
-    async (container: Container | undefined) => {},
+    async (container: Container | undefined) => { },
     []
   );
 
   return (
     <Particles
-      className='w-full h-full absolute z-[10]'
+      className='w-full h-full relative z-0'
       id='tsparticles'
       init={particlesInit}
       loaded={particlesLoaded}

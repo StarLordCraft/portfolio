@@ -40,7 +40,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.className} transition-all duration-300 bg-backgroundLight bg-no-repeat bg-cover w-screen h-screen`}>
+        className={`${inter.className} transition-all duration-300 bg-backgroundLight w-screen h-screen`}>
         <Image
           src={bgSite}
           alt=''

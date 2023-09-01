@@ -43,6 +43,7 @@ export default function Page({
           </div>
         </section>
         <section className='w-[1200px] h-full absolute right-0 bottom-0 fadeInUp'>
+          <ParticlesContainer />
           <div
             className='dark:xl:bg-right w-full h-full
              relative mix-blend-color-dodge translate-z-0'>
@@ -63,8 +64,6 @@ export default function Page({
               absolute -right-[100] -z-20 dark:xl:block'
             />
           </div>
-
-          <ParticlesContainer />
 
           <div
             className='w-full h-full max-w-[737px] max-h-[678px] 
