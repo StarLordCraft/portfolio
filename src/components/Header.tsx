@@ -4,6 +4,8 @@ import Image from 'next/image';
 import ToggleTheme from './ToggleTheme';
 import Socials from './Socials';
 
+import logo from '@/../public/logo.png';
+
 export default function Header() {
   return (
     <header
@@ -16,7 +18,7 @@ export default function Header() {
           <div className='flex justify-between items-center w-full'>
             <Link href={'/'}>
               <Image
-                src={'/logo.png'}
+                src={logo}
                 width={40}
                 height={40}
                 alt=''

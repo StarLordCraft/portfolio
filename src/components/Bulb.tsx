@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import bulbImg from '@/../public/bulb.png';
 export default function Bulb() {
   return (
     <div
@@ -6,7 +7,7 @@ export default function Bulb() {
         mix-blend-color-dodge animate-pulse duration-75 z-10 w-[200px]
         xl:w-[260px]'>
       <Image
-        src={'/bulb.png'}
+        src={bulbImg}
         alt=''
         width={260}
         height={200}

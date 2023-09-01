@@ -24,10 +24,8 @@ const config: Config = {
       },
 
       backgroundImage: {
-        explosion: 'url("/bg-explosion.png")',
-        circles: 'url("/bg-circles.png")',
-        circleStar: 'url("/circle-star.svg")',
-        backgroundDark: 'url("/site-bg-dark.svg")',
+        circles: 'url("/images//bg-circles.png")',
+        circleStar: 'url("/images/circle-star.svg")',
       },
 
       animation: {

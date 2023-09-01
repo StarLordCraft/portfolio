@@ -1,6 +1,6 @@
 import Bulb from '@/components/Bulb';
 import Circles from '@/components/Circles';
-import TestimonialSlider from '@/app/[lang]/testimonials/testimonials/TestimonialSlider';
+import TestimonialSlider from './_components/TestimonialSlider';
 
 const testimonialData: string[] = [
   'insane',

@@ -2,7 +2,11 @@ import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
-import { defaultLocale } from '../middlewares/lang/middleware';
+import Image from 'next/image';
+
+import { defaultLocale } from '@/middleware';
+
+import bgSite from '@/../public/site-bg-dark.svg';
 
 import TopLeftImage from '@/components/TopLeftImage';
 import NavBar from '@/components/NavBard';
@@ -36,7 +40,14 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.className} transition-all duration-300 bg-backgroundLight dark:bg-backgroundDark bg-no-repeat bg-cover w-screen h-screen`}>
+        className={`${inter.className} transition-all duration-300 bg-backgroundLight bg-no-repeat bg-cover w-screen h-screen`}>
+        <Image
+          src={bgSite}
+          alt=''
+          width={10}
+          height={10}
+          className='w-full h-full hidden dark:block absolute -z-10 object-cover'
+        />
         <TopLeftImage />
         <NavBar lang={params.lang} />
         <Header />

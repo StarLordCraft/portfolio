@@ -2,6 +2,8 @@ import WorkSlider from './_components/WorkSlider';
 import Bulb from '@/components/Bulb';
 import Circles from '@/components/Circles';
 
+import { StaticImageData } from 'next/image';
+
 import {
   FaHtml5,
   FaCss3,
@@ -25,12 +27,14 @@ import {
 } from 'react-icons/si';
 export interface Project {
   readonly title: string;
-  readonly image: string;
   readonly description: string;
   readonly icons?: React.JSX.Element[];
   readonly deploy: string;
+  readonly image: StaticImageData;
   readonly source: string;
 }
+
+import project1 from '@/../public/bg-explosion.png';
 
 export interface WorkData {
   readonly slides: { readonly content: Project[] }[];
@@ -42,10 +46,10 @@ const workData: WorkData = {
       content: [
         {
           title: 'title1',
-          image: '/bg-explosion.png',
           description:
             'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt eaque, reiciendis, dolor atque, expedita voluptatibus ipsa impedit a repellat non quia! Sed nemo aperiam tenetur provident impedit modi ullam quae.',
             deploy: '',
+            image: project1,
             source: '',
             icons: [
               <FaHtml5 key={1} />,
@@ -61,26 +65,26 @@ const workData: WorkData = {
           },
         {
           title: 'title2',
-          image: '/bg-explosion.png',
           description:
             'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt eaque, reiciendis, dolor atque, expedita voluptatibus ipsa impedit a repellat non quia! Sed nemo aperiam tenetur provident impedit modi ullam quae.',
             deploy: '',
+            image: project1,
             source: '',
         },
         {
           title: 'title3',
-          image: '/bg-explosion.png',
           description:
             'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt eaque, reiciendis, dolor atque, expedita voluptatibus ipsa impedit a repellat non quia! Sed nemo aperiam tenetur provident impedit modi ullam quae.',
             deploy: '',
+            image: project1,
             source: '',
         },
         {
           title: 'title4',
-          image: '/bg-explosion.png',
           description:
             'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt eaque, reiciendis, dolor atque, expedita voluptatibus ipsa impedit a repellat non quia! Sed nemo aperiam tenetur provident impedit modi ullam quae.',
             deploy: '',
+            image: project1,
             source: '',
         },
       ],
@@ -89,34 +93,34 @@ const workData: WorkData = {
       content: [
         {
           title: 'title5',
-          image: '/bg-explosion.png',
           description:
             'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt eaque, reiciendis, dolor atque, expedita voluptatibus ipsa impedit a repellat non quia! Sed nemo aperiam tenetur provident impedit modi ullam quae.',
             deploy: '',
+            image: project1,
             source: '',
         },
         {
           title: 'title6',
-          image: '/bg-explosion.png',
           description:
             'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt eaque, reiciendis, dolor atque, expedita voluptatibus ipsa impedit a repellat non quia! Sed nemo aperiam tenetur provident impedit modi ullam quae.',
             deploy: '',
+            image: project1,
             source: '',
         },
         {
           title: 'title7',
-          image: '/bg-explosion.png',
           description:
             'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt eaque, reiciendis, dolor atque, expedita voluptatibus ipsa impedit a repellat non quia! Sed nemo aperiam tenetur provident impedit modi ullam quae.',
             deploy: '',
+            image: project1,
             source: '',
         },
         {
           title: 'title8',
-          image: '/bg-explosion.png',
           description:
             'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt eaque, reiciendis, dolor atque, expedita voluptatibus ipsa impedit a repellat non quia! Sed nemo aperiam tenetur provident impedit modi ullam quae.',
             deploy: '',
+            image: project1,
             source: '',
         },
       ],

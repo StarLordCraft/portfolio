@@ -25,7 +25,10 @@ export default function WorkSlider({
   const [projectDetails, setProjectDetails] =
     useState<Project | null>(null);
 
-  const handleSeeMore = (project: Project, event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
+  const handleSeeMore = (
+    project: Project,
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ): void => {
     event.stopPropagation();
     setProjectDetails(project);
   };
@@ -52,7 +55,12 @@ export default function WorkSlider({
                         <button
                           className='relative rounded-lg
                      flex items-center justify-center group text-white'
-                          onClick={(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => handleSeeMore(project, event)}>
+                          onClick={(
+                            event: React.MouseEvent<
+                              HTMLButtonElement,
+                              MouseEvent
+                            >
+                          ) => handleSeeMore(project, event)}>
                           <div
                             className='flex items-center justify-center
                     relative overflow-hidden'>

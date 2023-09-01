@@ -44,7 +44,7 @@ export default function ParticlesContainer() {
 
   return (
     <Particles
-      className='w-full h-full absolute z-0'
+      className='w-full h-full absolute z-[10]'
       id='tsparticles'
       init={particlesInit}
       loaded={particlesLoaded}

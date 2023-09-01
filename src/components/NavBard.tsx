@@ -9,9 +9,11 @@ import {
   HiEnvelope,
 } from 'react-icons/hi2';
 
-import { defaultLocale } from '@/middlewares/lang/middleware';
+import { defaultLocale } from '@/middleware';
 
 import { usePathname } from 'next/navigation';
+
+import Link from 'next/link';
 
 interface NavData {
   readonly name: string;
@@ -22,30 +24,30 @@ interface NavData {
 export default function NavBar({ lang }: { lang: string }) {
   lang = lang ? lang : defaultLocale;
   const navData: NavData[] = [
-    { name: `home`, path: `/${lang}`, icon: <HiHome /> },
+    { name: `home`, path: `/`, icon: <HiHome /> },
     {
       name: `${lang == 'en' ? 'about' : 'sobre'}`,
-      path: `/${lang}/about`,
+      path: `/about`,
       icon: <HiUser />,
     },
     {
       name: `${lang == 'en' ? 'services' : 'serviços'}`,
-      path: `/${lang}/services`,
+      path: `/services`,
       icon: <HiRectangleGroup />,
     },
     {
       name: `${lang == 'en' ? 'work' : 'trabalho'}`,
-      path: `/${lang}/work`,
+      path: `/work`,
       icon: <HiViewColumns />,
     },
     {
       name: `${lang == 'en' ? 'testimonials' : 'depoimentos'}`,
-      path: `/${lang}/testimonials`,
+      path: `/testimonials`,
       icon: <HiChatBubbleBottomCenterText />,
     },
     {
       name: `${lang == 'en' ? 'contact' : 'contato'}`,
-      path: `/${lang}/contact`,
+      path: `/contact`,
       icon: <HiEnvelope />,
     },
   ];
@@ -62,7 +64,7 @@ export default function NavBar({ lang }: { lang: string }) {
       xl:h-max py-8 backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full dark:text-white'>
         {navData.map((link, index) => {
           return (
-            <a
+            <Link
               href={link.path}
               key={index}
               className={`${
@@ -87,7 +89,7 @@ export default function NavBar({ lang }: { lang: string }) {
               </div>
 
               <div>{link.icon}</div>
-            </a>
+            </Link>
           );
         })}
       </div>

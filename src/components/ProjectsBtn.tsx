@@ -1,5 +1,5 @@
 import Image from 'next/image';
-
+import projectsBtnImg from '@/../public/rounded-text.png';
 import { HiArrowRight } from 'react-icons/hi2';
 export default function ProjectsBtn() {
   return (
@@ -9,7 +9,7 @@ export default function ProjectsBtn() {
         className='relative w-[200px] h-[200px] flex items-center justify-center
              bg-circleStar bg-cover bg-center bg-no-repeat group z-10'>
         <Image
-          src='/rounded-text.png'
+          src={projectsBtnImg}
           alt=''
           width={200}
           height={200}
