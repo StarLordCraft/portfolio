@@ -46,7 +46,7 @@ export default function Page({
           <ParticlesContainer />
           <div
             className='dark:xl:bg-right w-full h-full
-             relative mix-blend-color-dodge translate-z-0'>
+             absolute mix-blend-color-dodge translate-z-0'>
             <Image
               src={bgAvatar}
               alt=''
