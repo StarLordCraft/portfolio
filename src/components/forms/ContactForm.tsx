@@ -8,7 +8,7 @@ export default function ContactForm() {
   return (
     <form
       className='flex-1 flex flex-col gap-6 w-full
-        mx-auto mt-10 text-[1.5rem] text-black dark:text-white'>
+        mx-auto mt-10 text-[1.5rem] text-black dark:text-white fadeInRight'>
       <div className='flex gap-x-6 w-full'>
         <input
           type='text'

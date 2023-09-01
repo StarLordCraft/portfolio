@@ -52,7 +52,7 @@ export default function Page({
               width={2000}
               height={2000}
               className='w-full h-full object-cover
-              absolute -left-32 -z-10 hidden dark:block'
+              absolute -left-32 -z-10 hidden dark:xl:block'
             />
             <Image
               src={bgAvatar}
@@ -60,7 +60,7 @@ export default function Page({
               width={2000}
               height={2000}
               className='w-full h-full hidden
-              absolute -right-[100] -z-20 dark:block'
+              absolute -right-[100] -z-20 dark:xl:block'
             />
           </div>
 

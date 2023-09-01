@@ -9,7 +9,7 @@ export default function Page() {
         className='container mx-auto py-36 text-center
             xl:text-left flex items-center justify-center h-full'>
         <div className='flex flex-col w-full max-w-[700px]'>
-          <h2 className='h2 text-center mb-12 text-black dark:text-white'>
+          <h2 className='h2 text-center mb-12 text-black dark:text-white fadeInLeft'>
             Let s{' '}
             <span className='text-indigo-500 dark:text-accent'>
               Connect.
