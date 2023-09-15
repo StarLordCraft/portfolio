@@ -4,14 +4,14 @@ import { Inter } from 'next/font/google';
 
 import Image from 'next/image';
 
-import { defaultLocale } from '@/middleware';
-
 import bgSite from '@/../public/site-bg-dark.svg';
 
 import TopLeftImage from '@/components/TopLeftImage';
 import NavBar from '@/components/NavBard';
 import Header from '@/components/Header';
 import Transition from '@/components/Transition';
+
+import type { Locale } from '@/i18n.config';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -25,10 +25,10 @@ export default function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { lang: string };
+  params: { lang: Locale };
 }) {
   return (
-    <html lang={params.lang ?? defaultLocale}>
+    <html lang={params.lang}>
       <head>
         <link
           rel='icon'

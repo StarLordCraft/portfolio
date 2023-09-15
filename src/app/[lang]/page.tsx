@@ -2,6 +2,10 @@ import ProjectsBtn from '@/components/ProjectsBtn';
 import Avatar from '@/components/Avatar';
 import ParticlesContainer from '@/components/ParticlesContainer';
 
+//locale imports
+import { getDictionary } from '@/lang/dictionary';
+import type { Locale } from '@/i18n.config';
+
 import Image from 'next/image';
 
 import bgAvatar from '@/../public/bg-explosion.png';
@@ -9,8 +13,9 @@ import bgAvatar from '@/../public/bg-explosion.png';
 export default function Page({
   params,
 }: {
-  params: { lang: string };
+  params: { lang: Locale };
 }) {
+  const locale = getDictionary(params.lang, 'home');
   return (
     <div className='bg-primaryDark/10 h-full w-full'>
       <main
