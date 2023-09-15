@@ -3,8 +3,10 @@
 import { useEffect, useState } from 'react';
 
 import { usePathname } from 'next/navigation';
+import { Locale } from '@/i18n.config';
 
-export default function ToggleTheme() {
+export default function ToggleTheme({lang}: {lang:Locale}): React.JSX.Element
+{
   const pathname = usePathname();
 
   let themePrefference: string = 'dark';
@@ -39,7 +41,7 @@ export default function ToggleTheme() {
   const setTheme = async () => {
     setIsDarkTheme((prevTheme) => !prevTheme);
     localStorage.setItem('dark', (!isDarkTheme).toString());
-    if (pathname == '/') window.location.reload();
+    if (pathname == `/${lang}`) window.location.reload();
   };
 
   return (

@@ -5,8 +5,10 @@ import ToggleTheme from './ToggleTheme';
 import Socials from './Socials';
 
 import logo from '@/../public/logo.png';
+import { Locale } from '@/i18n.config';
 
-export default function Header() {
+export default function Header({lang}: {lang:Locale}): React.JSX.Element
+{
   return (
     <header
       className='absolute z-30 w-full flex items-center
@@ -25,7 +27,7 @@ export default function Header() {
                 priority={true}
               />
             </Link>
-            <ToggleTheme />
+            <ToggleTheme lang={lang}/>
           </div>
           <Socials />
         </div>

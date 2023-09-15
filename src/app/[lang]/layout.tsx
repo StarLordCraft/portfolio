@@ -54,7 +54,7 @@ export default function RootLayout({
         />
         <TopLeftImage />
         <NavBar lang={params.lang} />
-        <Header />
+        <Header lang={params.lang} />
         <Transition>{children}</Transition>
       </body>
     </html>

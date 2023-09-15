@@ -15,37 +15,59 @@ import { Locale } from '@/i18n.config';
 
 import Link from 'next/link';
 
+
+// why i'm doing this????? Simple Client Components does not has async methods yet........ NextJS issues...
+const locales = {
+  en: {
+    about: 'About',
+    services: 'Services',
+    work: 'Work',
+    testimonials: 'Testimonials',
+    contact: 'Contact',
+  },
+
+  pt: {
+    about: 'Sobre',
+    services: 'Serviços',
+    work: 'Trabalho',
+    testimonials: 'Depoimentos',
+    contact: 'Contato',
+  },
+}
+
 interface NavData {
   readonly name: string;
   readonly path: string;
   readonly icon: React.JSX.Element;
 }
 
-export default function NavBar({ lang }: { lang: Locale }) {
+export default async function NavBar({ lang }: { lang: Locale }) {
+  const locale = locales[lang];
+
   const navData: NavData[] = [
-    { name: `home`, path: `/`, icon: <HiHome /> },
+    { name: `home`, path: `/${lang}`, icon: <HiHome /> },
     {
-      name: `${lang == 'en' ? 'about' : 'sobre'}`,
+      name: locale.about,
       path: `/about`,
       icon: <HiUser />,
     },
     {
-      name: `${lang == 'en' ? 'services' : 'serviços'}`,
+      name: locale.services,
       path: `/services`,
       icon: <HiRectangleGroup />,
     },
     {
-      name: `${lang == 'en' ? 'work' : 'trabalho'}`,
+      name: locale.work,
       path: `/work`,
       icon: <HiViewColumns />,
     },
     {
-      name: `${lang == 'en' ? 'testimonials' : 'depoimentos'}`,
+      name: locale.testimonials,
       path: `/testimonials`,
       icon: <HiChatBubbleBottomCenterText />,
     },
     {
-      name: `${lang == 'en' ? 'contact' : 'contato'}`,
+      name: locale.contact,
       path: `/contact`,
       icon: <HiEnvelope />,
     },

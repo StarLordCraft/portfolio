@@ -1,5 +1,5 @@
-import 'server-only'
 import type { Locale } from '@/i18n.config'
+import 'server-only'
 
 //just import the current path locale!
 const dictionaries = {
