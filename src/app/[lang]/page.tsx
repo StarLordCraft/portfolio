@@ -10,12 +10,12 @@ import Image from 'next/image';
 
 import bgAvatar from '@/../public/bg-explosion.png';
 
-export default function Page({
+export default async function Page({
   params,
 }: {
   params: { lang: Locale };
 }) {
-  const locale = getDictionary(params.lang, 'home');
+  const locale = await getDictionary(params.lang, 'home');
   return (
     <div className='bg-primaryDark/10 h-full w-full'>
       <main
@@ -25,10 +25,10 @@ export default function Page({
           className='text-center flex flex-col justify-center xl:pt-40
         xl:text-left h-full container mx-auto'>
           <h1 className='h1 dark:text-white fadeInDown'>
-            Transforming Ideas <br /> Into
+            {locale.title}
             <span className='text-indigo-500 dark:text-accent'>
               {' '}
-              Digital Reality
+              {locale.highlightTitle}
             </span>
           </h1>
           <p

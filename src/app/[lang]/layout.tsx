@@ -11,7 +11,7 @@ import NavBar from '@/components/NavBard';
 import Header from '@/components/Header';
 import Transition from '@/components/Transition';
 
-import type { Locale } from '@/i18n.config';
+import { Locale, i18n } from '@/i18n.config'
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   title: 'Rafael Alves',
   description: 'Conheça seu futuro programador FullStack',
 };
+
+export async function generateStaticParams() {
+  return i18n.locales.map(locale => ({ lang: locale }))
+}
 
 export default function RootLayout({
   children,
