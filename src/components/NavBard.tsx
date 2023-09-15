@@ -9,9 +9,9 @@ import {
   HiEnvelope,
 } from 'react-icons/hi2';
 
-import { defaultLocale } from '@/middleware';
-
 import { usePathname } from 'next/navigation';
+
+import { Locale } from '@/i18n.config';
 
 import Link from 'next/link';
 
@@ -21,8 +21,7 @@ interface NavData {
   readonly icon: React.JSX.Element;
 }
 
-export default function NavBar({ lang }: { lang: string }) {
-  lang = lang ? lang : defaultLocale;
+export default function NavBar({ lang }: { lang: Locale }) {
   const navData: NavData[] = [
     { name: `home`, path: `/`, icon: <HiHome /> },
     {

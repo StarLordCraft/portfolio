@@ -1,3 +1,5 @@
+import React from 'react';
+
 import ProjectsBtn from '@/components/ProjectsBtn';
 import Avatar from '@/components/Avatar';
 import ParticlesContainer from '@/components/ParticlesContainer';
@@ -16,6 +18,7 @@ export default async function Page({
   params: { lang: Locale };
 }) {
   const locale = await getDictionary(params.lang, 'home');
+
   return (
     <div className='bg-primaryDark/10 h-full w-full'>
       <main
@@ -34,11 +37,7 @@ export default async function Page({
           <p
             className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-black dark:text-white
           fadeInDown'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Omnis laboriosam culpa in esse dolorum tempore quam
-            asperiores nemo debitis! Dolor consectetur dignissimos
-            molestiae maiores est possimus obcaecati provident ipsa
-            dolore?
+          
           </p>
           <div className='xl:flex hidden relative fadeInDown'>
             <ProjectsBtn />
