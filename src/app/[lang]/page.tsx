@@ -37,7 +37,7 @@ export default async function Page({
           <p
             className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-black dark:text-white
           fadeInDown'>
-          
+            {locale.subtitle}
           </p>
           <div className='xl:flex hidden relative fadeInDown'>
             <ProjectsBtn />

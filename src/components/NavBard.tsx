@@ -41,34 +41,34 @@ interface NavData {
   readonly icon: React.JSX.Element;
 }
 
-export default async function NavBar({ lang }: { lang: Locale }) {
+export default function NavBar({ lang }: { lang: Locale }) {
   const locale = locales[lang];
 
   const navData: NavData[] = [
     { name: `home`, path: `/${lang}`, icon: <HiHome /> },
     {
       name: locale.about,
-      path: `/about`,
+      path: `/${lang}/about`,
       icon: <HiUser />,
     },
     {
       name: locale.services,
-      path: `/services`,
+      path: `/${lang}/services`,
       icon: <HiRectangleGroup />,
     },
     {
       name: locale.work,
-      path: `/work`,
+      path: `/${lang}/work`,
       icon: <HiViewColumns />,
     },
     {
       name: locale.testimonials,
-      path: `/testimonials`,
+      path: `/${lang}/testimonials`,
       icon: <HiChatBubbleBottomCenterText />,
     },
     {
       name: locale.contact,
-      path: `/contact`,
+      path: `/${lang}/contact`,
       icon: <HiEnvelope />,
     },
   ];
