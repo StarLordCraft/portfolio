@@ -9,7 +9,7 @@ export default function Circles() {
       className='w-[200px] xl:w-[300px] absolute -right-24 -bottom-20
         dark:-right-16 dark:-bottom-2 dark:mix-blend-color-dodge
          animate-pulse duration-76
-         z-10'>
+         z-10 overflow-hidden'>
       <Image
         src={circles}
         alt=''
