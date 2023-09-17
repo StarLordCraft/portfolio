@@ -10,6 +10,7 @@ import { ServicesData } from '@/app/[lang]/services/page';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
+import Link from 'next/link';
 
 export default function ServiceSlider({
   servicesData,
@@ -38,11 +39,12 @@ export default function ServiceSlider({
         return (
           <SwiperSlide
             key={index}
-            className='overflow-y-auto'>
-            <section
+            className='overflow-y-auto h-full'>
+            <Link
+              href='/contact'
               className='bg-[rgba(55,47,123,0.15)] hover:bg-[rgba(89,65,169,0.15)]
-                    h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 transition-all duration-300
-                    sm:gap-x-0 group cursor-pointer text-black dark:text-white/40'>
+                    h-full rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 transition-all duration-300
+                    sm:gap-x-0 group cursor-pointer text-black dark:text-white/40 relative'>
               <div className='text-4xl text-indigo-500 dark:text-accent font-bold'>
                 {service.icon}
               </div>
@@ -56,13 +58,13 @@ export default function ServiceSlider({
                 </p>
               </div>
 
-              <div className='text-3xl'>
+              <div className='text-3xl absolute bottom-7'>
                 <RxArrowTopRight
                   className='group-hover:rotate-45 group-hover:text-indigo-500
                             dark:group-hover:text-accent transition-all duration-300'
                 />
               </div>
-            </section>
+            </Link>
           </SwiperSlide>
         );
       })}

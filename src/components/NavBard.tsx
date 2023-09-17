@@ -61,11 +61,11 @@ export default function NavBar({ lang }: { lang: Locale }) {
       path: `/${lang}/work`,
       icon: <HiViewColumns />,
     },
-    {
-      name: locale.testimonials,
-      path: `/${lang}/testimonials`,
-      icon: <HiChatBubbleBottomCenterText />,
-    },
+    //{
+      //name: locale.testimonials,
+      //path: `/${lang}/testimonials`,
+      //icon: <HiChatBubbleBottomCenterText />,
+    //},
     {
       name: locale.contact,
       path: `/${lang}/contact`,
