@@ -29,7 +29,7 @@ export default {
 
     aboutTitle: 'Captivating ',
     aboutHighlight: 'Stories ',
-    aboutTitle2: 'birth magnificent Apps',
+    aboutTitle2: 'Birth Magnificent Apps',
 
     about: `I began freelancing as a developer since 2023. Since then,
     I ve done remote work for agencies and collabored on
@@ -41,5 +41,4 @@ export default {
         projects: 'Finished Projects',
         awards: 'Winning Awards',
     }
-
 }

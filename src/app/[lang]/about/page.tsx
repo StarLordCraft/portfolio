@@ -153,7 +153,7 @@ export default async function Page({
           xl:flex-row gap-x-6'>
         <section className='flex-1 flex flex-col justify-center'>
           <h2 className='h2 fadeInRight'>
-            {locale.title}
+            {locale.aboutTitle}
             <span className='text-indigo-500 dark:text-accent'>
               {locale.aboutHighlight}
             </span>
