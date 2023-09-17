@@ -3,9 +3,10 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 import { AboutDataItem, InfoItem } from '@/app/[lang]/about/page';
+import { Locale } from '@/i18n.config';
 
 export default function AboutHero({
-  aboutData,
+  aboutData
 }: {
   aboutData: AboutDataItem[];
 }) {
@@ -49,7 +50,7 @@ export default function AboutHero({
                     className=' hover:text-indigo-500 dark:hover:text-accent relative after:w-8 after:h-[2px] after:bg-black after:dark:bg-white
                     after:absolute after:left-0 after:-bottom-1 after:transition-all after:duration-300
                         hover:after:w-full hover:after:bg-indigo-500 dark:hover:after:bg-accent'>
-                    See Proof
+                    {item.proof}
                   </Link>
                 )}
 

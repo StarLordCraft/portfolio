@@ -27,11 +27,15 @@ import {
   SiMysql,
 } from 'react-icons/si';
 
+import type { Locale } from '@/i18n.config';
+import { getDictionary } from '@/lang/dictionary';
+
 export interface InfoItem {
   readonly title: string;
   readonly stage?: string;
   readonly icons?: React.JSX.Element[];
   readonly link?: Url;
+  readonly proof?: string;
 }
 
 export interface AboutDataItem {
@@ -40,106 +44,101 @@ export interface AboutDataItem {
   readonly icons?: React.JSX.Element[];
 }
 
-const aboutData: AboutDataItem[] = [
-  {
-    title: 'skills',
-    info: [
-      {
-        title: 'Frontend Development',
-        icons: [
-          <FaHtml5 key={1} />,
-          <FaCss3 key={2} />,
-          <FaBootstrap key={3} />,
-          <SiTailwindcss key={4} />,
-          <FaFigma key={5} />,
-          <FaJs key={6} />,
-          <SiTypescript key={7} />,
-          <FaReact key={8} />,
-          <FaVuejs key={9} />,
-        ],
-      },
-      {
-        title: 'Backend Development',
-        icons: [
-          <SiPhp key={1} />,
-          <SiNodedotjs key={2} />,
-          <FaLaravel key={3} />,
-          <SiNextdotjs key={4} />,
-          <SiMysql key={5} />,
-          <SiMongodb key={6} />,
-          <SiFirebase key={7} />,
-        ],
-      },
-    ],
-  },
-  {
-    title: 'awards',
-    info: [
-      {
-        title: '+30.000,00 R$ High School Scholarship',
-        stage: '2020 - 2022',
-        link: 'https://portal.montesclaros.mg.gov.br/noticia/educacao/prefeitura-realiza-cerimonia-de-encerramento-do-projeto-eu-vou-fazer-a-prova-brasil',
-      },
-      {
-        title: 'Silver Medal - OBA',
-        stage: '2020 - 2021',
-        link: 'http://www.oba.org.br/site/index.php/zerouminforma.com.br/estudante-da-escola-do-sesi-de-dourados-recebe-medalha-de-ouro-na-olimpiada-brasileira-de-astronomia-e-astronautica/?p=conteudo&idcat=22&pag=conteudo&acao=mostra&idaluno=2483&olimp=oba&ed=2020',
-      },
-      {
-        title: 'Gold Medal - OBA',
-        stage: '2021 - 2022',
-        link: 'http://www.oba.org.br/site/index.php/zerouminforma.com.br/estudante-da-escola-do-sesi-de-dourados-recebe-medalha-de-ouro-na-olimpiada-brasileira-de-astronomia-e-astronautica/?p=conteudo&idcat=22&pag=conteudo&acao=mostra&idaluno=413251&olimp=oba&ed=2021',
-      },
-      {
-        title: 'Bronze Medal - OBA',
-        stage: '2022 - 2023',
-        link: 'http://www.oba.org.br/site/index.php/zerouminforma.com.br/estudante-da-escola-do-sesi-de-dourados-recebe-medalha-de-ouro-na-olimpiada-brasileira-de-astronomia-e-astronautica/?p=conteudo&idcat=22&pag=conteudo&acao=mostra&idaluno=949023&olimp=oba&ed=2022',
-      },
-    ],
-  },
-  {
-    title: 'experience',
-    info: [
-      {
-        title: 'UX/UI Designer - XYZ Company',
-        stage: '2012 - 2023',
-      },
-      {
-        title: 'Web Developer - ABC Agency',
-        stage: '2010 - 2012',
-      },
-      {
-        title: 'Intern - DEF Corporation',
-        stage: '2008 - 2010',
-      },
-    ],
-  },
-  {
-    title: 'credentials',
-    info: [
-      {
-        title: 'Web Development - ABC University, LA, CA',
-        stage: '2011',
-      },
-      {
-        title: 'Computer Science Diploma - AV Technical Institute',
-        stage: '2009',
-      },
-      {
-        title:
-          'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
-        stage: '2006',
-      },
-    ],
-  },
-];
 
-export default function Page({
+export default async function Page({
   params,
 }: {
-  params: { lang: string };
+  params: { lang: Locale };
 }) {
-  console.log(params);
+  const locale = await getDictionary(params.lang, 'about');
+  const aboutData: AboutDataItem[] = [
+    {
+      title: locale.skills.title,
+      info: [
+        {
+          title: locale.skills.frontend,
+          icons: [
+            <FaHtml5 key={1} />,
+            <FaCss3 key={2} />,
+            <FaBootstrap key={3} />,
+            <SiTailwindcss key={4} />,
+            <FaFigma key={5} />,
+            <FaJs key={6} />,
+            <SiTypescript key={7} />,
+            <FaReact key={8} />,
+            <FaVuejs key={9} />,
+          ],
+        },
+        {
+          title: locale.skills.backend,
+          icons: [
+            <SiPhp key={1} />,
+            <SiNodedotjs key={2} />,
+            <FaLaravel key={3} />,
+            <SiNextdotjs key={4} />,
+            <SiMysql key={5} />,
+            <SiMongodb key={6} />,
+            <SiFirebase key={7} />,
+          ],
+        },
+      ],
+    },
+    {
+      title: locale.awards.title,
+      info: [
+        {
+          title: locale.awards.school,
+          stage: '2020 - 2022',
+          link: 'https://portal.montesclaros.mg.gov.br/noticia/educacao/prefeitura-realiza-cerimonia-de-encerramento-do-projeto-eu-vou-fazer-a-prova-brasil',
+          proof: locale.awards.proof,
+        },
+        {
+          title: locale.awards.OBA2020,
+          stage: '2020 - 2021',
+          link: 'http://www.oba.org.br/site/index.php/zerouminforma.com.br/estudante-da-escola-do-sesi-de-dourados-recebe-medalha-de-ouro-na-olimpiada-brasileira-de-astronomia-e-astronautica/?p=conteudo&idcat=22&pag=conteudo&acao=mostra&idaluno=2483&olimp=oba&ed=2020',
+          proof: locale.awards.proof,
+        },
+        {
+          title: locale.awards.OBA2021,
+          stage: '2021 - 2022',
+          link: 'http://www.oba.org.br/site/index.php/zerouminforma.com.br/estudante-da-escola-do-sesi-de-dourados-recebe-medalha-de-ouro-na-olimpiada-brasileira-de-astronomia-e-astronautica/?p=conteudo&idcat=22&pag=conteudo&acao=mostra&idaluno=413251&olimp=oba&ed=2021',
+          proof: locale.awards.proof,
+        },
+        {
+          title: locale.awards.OBA2022,
+          stage: '2022 - 2023',
+          link: 'http://www.oba.org.br/site/index.php/zerouminforma.com.br/estudante-da-escola-do-sesi-de-dourados-recebe-medalha-de-ouro-na-olimpiada-brasileira-de-astronomia-e-astronautica/?p=conteudo&idcat=22&pag=conteudo&acao=mostra&idaluno=949023&olimp=oba&ed=2022',
+          proof: locale.awards.proof,
+        },
+      ],
+    },
+    {
+      title: locale.experience.title,
+      info: [
+        {
+          title: locale.experience.freelancer,
+          stage: '2022 - 2023',
+        },
+        {
+          title: locale.experience.personal,
+          stage: '2021 - 2023',
+        },
+      ],
+    },
+    {
+      title: 'credentials',
+      info: [
+        {
+          title: locale.credentials.academic,
+          stage: '2023 - 2027',
+        },
+        {
+          title: locale.credentials.courses,
+          stage: '2021 - ????',
+        }
+      ],
+    },
+  ];
   
   return (
     <section className='h-full dark:bg-primaryDark/30 py-32 text-center dark:text-white xl:text-left'>
@@ -154,18 +153,16 @@ export default function Page({
           xl:flex-row gap-x-6'>
         <section className='flex-1 flex flex-col justify-center'>
           <h2 className='h2 fadeInRight'>
-            Captivating{' '}
+            {locale.title}
             <span className='text-indigo-500 dark:text-accent'>
-              stories
-            </span>{' '}
-            birth magnificent Apps
+              {locale.aboutHighlight}
+            </span>
+            {locale.aboutTitle2}
           </h2>
           <p
             className='max-w-[500px] mx-auto xl:mx-9 mb-6 xl:mb-12 px-2 xl:px-0 
             text-black/60 dark:text-white/60 fadeInRight'>
-            I began freelancing as a developer since 2023. Since then,
-            I ve done remote work for agencies and collabored on
-            digital products for business and consumer use.
+            {locale.about}
           </p>
 
           <div
@@ -176,27 +173,27 @@ export default function Page({
                 start={0}
                 end={new Date().getFullYear() - 2023 || 1}
                 duration={8}
-                title='Years of experience'
+                title={locale.counters.experience}
               />
               <Counter
                 start={0}
                 end={3}
                 duration={8}
-                title='Satisfied Clients'
+                title={locale.counters.clients}
               />
 
               <Counter
                 start={0}
                 end={30}
                 duration={8}
-                title='Finished Projects'
+                title={locale.counters.projects}
               />
 
               <Counter
                 start={0}
                 end={4}
                 duration={8}
-                title='Winning Awards'
+                title={locale.counters.awards}
                 last={true}
               />
             </section>
