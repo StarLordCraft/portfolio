@@ -19,8 +19,10 @@ import 'swiper/css/pagination';
 
 export default function WorkSlider({
   workData,
+  locale
 }: {
   workData: WorkData;
+  locale: any;
 }) {
   const [projectDetails, setProjectDetails] =
     useState<Project | null>(null);
@@ -100,6 +102,7 @@ export default function WorkSlider({
       <WorkModal
         project={projectDetails}
         setProjectDetails={setProjectDetails}
+        locale={locale}
       />
     </>
   );

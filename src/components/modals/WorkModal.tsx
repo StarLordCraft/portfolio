@@ -10,9 +10,11 @@ import type { Project } from '@/app/[lang]/work/page';
 export default function WorkModal({
   project,
   setProjectDetails,
+  locale
 }: {
   project: Project | null;
   setProjectDetails: (project: Project | null) => void;
+  locale: any;
 }) {
   const closeModal = () => {
     setProjectDetails(null);
@@ -23,9 +25,9 @@ export default function WorkModal({
       modalData={project}
       setModalData={setProjectDetails}>
       {project && (
-        <div className='px-2 w-full fadeInLeft'>
+        <div className='px-2 w-fit fadeInLeft'>
           <section
-            className={`w-full h-full bg-white dark:bg-black
+            className={`w-fit h-fit bg-white dark:bg-black
            text-black dark:text-white rounded-lg shadow-lg shadow-slate-100
            dark:shadow-black max-w-[550px] relative`}>
             <button
@@ -34,7 +36,7 @@ export default function WorkModal({
               onClick={() => setProjectDetails(null)}>
               <AiOutlineClose />
             </button>
-            <div className='w-full h-[350px] rounded-t-lg mb-5'>
+            <div className='w-auto h-auto rounded-t-lg mb-5'>
               <Image
                 src={project.image}
                 alt='project image'
@@ -63,7 +65,7 @@ export default function WorkModal({
                 className='block w-[49%] text-center py-5 hover:bg-indigo-500 
                 dark:hover:bg-accent hover:font-bold rounded-b-lg text-white
                 dark:text-black bg-black dark:bg-white'>
-                See Project
+                {locale.deploy}
               </Link>
               <Link
                 href={project.source}
@@ -71,7 +73,7 @@ export default function WorkModal({
                 className='block w-[50%] text-center py-5 hover:bg-indigo-500 
                 dark:hover:bg-accent hover:font-bold rounded-b-lg text-white
                 dark:text-black bg-black dark:bg-white'>
-                See Source
+                {locale.source}
               </Link>
             </div>
           </section>

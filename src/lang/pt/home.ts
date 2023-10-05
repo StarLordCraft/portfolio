@@ -3,7 +3,7 @@ function Title(): React.JSX.Element {
   return React.createElement(
     React.Fragment,
     null,
-    'Transformando Idéias',
+    'Transformando Ideias',
     React.createElement('br'),
     'em'
   );
