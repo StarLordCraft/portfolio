@@ -3,11 +3,7 @@ export default {
     titleHighlight: "Trabalho",
     copy: `Como programador fullstack, meu objetivo é criar soluções digitais de ponta
     a ponta. Do design do front-end à programação do back-end, estou totalmente envolvido
-    no processo. Sou o arquiteto por trás das experiências on-line, começando pela concepção
-    de interfaces de usuário intuitivas e atraentes.No front-end, crio designs elegantes e
-    responsivos que cativam os usuários. No back-end, escrevo código robusto para manter os
-    sistemas funcionando perfeitamente. Trabalho com bancos de dados, servidores e APIs para
-    garantir uma integração perfeita.`,
+    no processo.`,
 
     projects: {
         rafaEvents: `Conecte-se com apaixonados por eventos e descubra experiências 

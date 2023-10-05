@@ -2,12 +2,7 @@ export default {
     title: "My",
     titleHighlight: "Work",
     copy: `As a fullstack developer, my goal is to create end-to-end digital solutions. 
-    From front-end design to back-end programming, I am fully engaged in the process. 
-    I am the architect behind online experiences, starting with the conception of 
-    intuitive and engaging user interfaces. On the front-end, I create elegant and 
-    responsive designs that captivate users. On the back-end, I write robust code to 
-    keep systems running seamlessly. I work with databases, servers, and APIs to ensure 
-    seamless integration.`,
+    From front-end design to back-end programming, I am fully engaged in the process.`,
 
     projects: {
         rafaEvents: `Connect with event enthusiasts and discover amazing experiences! 
