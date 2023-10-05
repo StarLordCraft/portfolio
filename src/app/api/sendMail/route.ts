@@ -32,7 +32,7 @@ export async function POST(req: NextRequest)
       return new NextResponse(
         JSON.stringify({
           status: 500,
-          message: 'An error occurred while sending the email',
+          message: `An error occurred while sending the email: ${error.message}`,
         })
       );
     }
