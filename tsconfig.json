@@ -26,9 +26,14 @@
       "@/*": [
         "./src/*"
       ],
-      "public/*":[
+
+      "public/*": [
         "./public/*"
       ],
+
+      "mails/*": [
+        "./src/mails/*"
+      ]
     },
     "forceConsistentCasingInFileNames": true
   },
