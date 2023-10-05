@@ -3,9 +3,9 @@ import { AxiosInstance } from 'axios';
 
 export default function API(): AxiosInstance 
 {
-  console.log(process.env.APP_URL);
+  console.log(process.env);
   
   return axios.create({
-    baseURL: `${process.env.APP_URL}/api`,
+    baseURL: `https://starlordcraft.vercel.app/api`,
   });
 }
