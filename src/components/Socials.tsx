@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import { RiWhatsappLine, RiMailLine } from 'react-icons/ri';
 import { ImLinkedin2, ImGithub } from 'react-icons/im';
 

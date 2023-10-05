@@ -10,7 +10,6 @@ import { ServicesData } from '@/app/[lang]/services/page';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-import Link from 'next/link';
 
 export default function ServiceSlider({
   servicesData,

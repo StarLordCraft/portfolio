@@ -13,8 +13,6 @@ import { usePathname } from 'next/navigation';
 
 import { Locale } from '@/i18n.config';
 
-import Link from 'next/link';
-
 
 // why i'm doing this????? Simple Client Components does not has async methods yet........ NextJS issues...
 const locales = {
