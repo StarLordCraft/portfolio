@@ -37,7 +37,11 @@ export default function ContactForm() {
     e.preventDefault();
 
     try {
-      const response = await API().post('/sendMail', formData);
+      const response = await API().post('/sendMail', {
+        email: formData.email,
+        name: formData.name,
+        message: formData.message
+      });
       const responseData = response.data;
       setStatusMessage(responseData.message);
     } catch (error) {
