@@ -5,7 +5,7 @@ import ToggleTheme from './ToggleTheme';
 import Socials from './Socials';
 
 import logo from '@/../public/logo.png';
-import { Locale } from '@/i18n.config';
+import type { Locale } from '@/i18n.config';
 
 export default function Header({lang}: {lang:Locale}): React.JSX.Element
 {
@@ -18,7 +18,7 @@ export default function Header({lang}: {lang:Locale}): React.JSX.Element
           className='flex flex-col justify-between
              items-center gap-y-4'>
           <div className='flex justify-between items-center w-full'>
-            <Link href={'/'}>
+            <a href={'/'}>
               <Image
                 src={logo}
                 width={40}
@@ -26,7 +26,7 @@ export default function Header({lang}: {lang:Locale}): React.JSX.Element
                 alt=''
                 priority={true}
               />
-            </Link>
+            </a>
             <ToggleTheme lang={lang}/>
           </div>
           <Socials />

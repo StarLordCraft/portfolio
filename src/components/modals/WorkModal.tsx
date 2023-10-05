@@ -59,13 +59,15 @@ export default function WorkModal({
             <div className='flex mt-4 gap-x-[1%] w-full'>
               <Link
                 href={project.deploy}
+                target={"_blank"}
                 className='block w-[49%] text-center py-5 hover:bg-indigo-500 
                 dark:hover:bg-accent hover:font-bold rounded-b-lg text-white
                 dark:text-black bg-black dark:bg-white'>
                 See Project
               </Link>
               <Link
-                href={project.deploy}
+                href={project.source}
+                target={"_blank"}
                 className='block w-[50%] text-center py-5 hover:bg-indigo-500 
                 dark:hover:bg-accent hover:font-bold rounded-b-lg text-white
                 dark:text-black bg-black dark:bg-white'>

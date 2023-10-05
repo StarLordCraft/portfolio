@@ -40,7 +40,7 @@ export default function ServiceSlider({
           <SwiperSlide
             key={index}
             className='overflow-y-auto h-full'>
-            <Link
+            <a
               href='/contact'
               className='bg-[rgba(55,47,123,0.15)] hover:bg-[rgba(89,65,169,0.15)]
                     h-full rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 transition-all duration-300
@@ -64,7 +64,7 @@ export default function ServiceSlider({
                             dark:group-hover:text-accent transition-all duration-300'
                 />
               </div>
-            </Link>
+            </a>
           </SwiperSlide>
         );
       })}
